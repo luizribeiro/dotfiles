@@ -1,0 +1,24 @@
+%include ~/.hgrc.local
+
+[ui]
+editor = vim
+
+[extensions]
+pager =
+progress =
+
+[defaults]
+log = -f
+
+[alias]
+show = export
+lg = log --style=$HOME/.hgconf/map-cmdline.slog
+
+[pager]
+pager = LESS=FRSXQ less
+quiet = True
+attend = diff,log,qdiff,blame,annotate,pdiff,glog,show,lg
+disable = status
+
+[diff]
+git = True

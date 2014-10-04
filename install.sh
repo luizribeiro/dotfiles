@@ -7,6 +7,8 @@ popd > /dev/null
 DOTFILES=(
   .bin
   .gitconfig
+  .hgconf
+  .hgrc
   .tmux.conf
   .vim
   .vimrc
