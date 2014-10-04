@@ -1,0 +1,21 @@
+[include]
+  path = ~/.gitconfig.local
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  grep = auto
+
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[color "grep"]
+  filename = 8
+  separator = 8
+
+[gc]
+  auto = 0
+
+[help]
+  autocorrect = 5
