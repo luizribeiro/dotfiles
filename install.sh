@@ -6,3 +6,4 @@ popd > /dev/null
 
 ln -s $DOTFILES_PATH/.gitconfig ~/.gitconfig
 ln -s $DOTFILES_PATH/.zshrc ~/.zshrc
+ln -s $DOTFILES_PATH/.tmux.conf ~/.tmux.conf
