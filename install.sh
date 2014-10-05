@@ -6,6 +6,7 @@ popd > /dev/null
 
 DOTFILES=(
   .bin
+  .dircolors
   .gitconfig
   .gitconfig.ignore
   .hgconf
