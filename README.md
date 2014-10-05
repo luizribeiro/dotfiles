@@ -15,4 +15,4 @@ Optionally, you can create the following files to customize things locally:
 * `~/.gitconfig.local`
 * `~/.hgrc.local`
 * `~/.vimrc.local`
-* `~/.zsh/local`
+* `~/.zshrc.local`

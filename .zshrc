@@ -171,6 +171,6 @@ zle -N zle-line-finish
 zle -N zle-keymap-select
 
 # load local settings
-if [ -f ~/.zsh/local ]; then
-  source ~/.zsh/local
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
