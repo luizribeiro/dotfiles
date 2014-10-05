@@ -7,7 +7,8 @@ I store my own UNIX config files here.
 This will create symlinks on your home directory and install Vundle plugins:
 
 ```
-./install.sh
+git clone git://github.com/luizribeiro/dotfiles.git ~/.dotfiles
+~/.dotfiles/install.sh
 ```
 
 Optionally, you can create the following files to customize things locally:
