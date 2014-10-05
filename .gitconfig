@@ -19,3 +19,6 @@
 
 [help]
   autocorrect = 5
+
+[core]
+  excludesfile = ~/.gitconfig.ignore

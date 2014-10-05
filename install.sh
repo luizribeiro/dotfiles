@@ -7,6 +7,7 @@ popd > /dev/null
 DOTFILES=(
   .bin
   .gitconfig
+  .gitconfig.ignore
   .hgconf
   .hgrc
   .tmux.conf
