@@ -46,7 +46,8 @@ bindkey "\eh" run-help
 autoload -U compinit
 compinit -i
 
-eval $(dircolors -b $HOME/.dircolors)
+DIRCOLORS=`command -v gdircolors dircolors | head -1`
+eval $($DIRCOLORS -b $HOME/.dircolors)
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -77,7 +78,8 @@ setopt hist_ignore_all_dups
 stty -ixon
 
 # aliases
-alias ls='ls -G -F --color=auto'
+LS_BIN=`command -v gls ls | head -1`
+alias ls='$LS_BIN -G -F --color=auto'
 alias grep='grep --color=always'
 alias less='less -R'
 alias mv='nocorrect mv'

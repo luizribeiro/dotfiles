@@ -16,3 +16,11 @@ Optionally, you can create the following files to customize things locally:
 * `~/.hgrc.local`
 * `~/.vimrc.local`
 * `~/.zshrc.local`
+
+### OS X
+
+If you're using OS X, you'll need to install the GNU Core Utilities first:
+
+```
+brew install coreutils
+```
