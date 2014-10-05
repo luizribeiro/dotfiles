@@ -17,10 +17,22 @@ DOTFILES=(
   .zshrc
 )
 
-echo "Linking config files to home directory"
+echo "Linking config files to $HOME..."
 for dotfile in "${DOTFILES[@]}"
 do
-  ln -sn $DOTFILES_PATH/$dotfile ~/$dotfile
+  if [[ -e "$HOME/$dotfile" ]]
+  then
+    while [[ "$REPLY" != [YyNn]* ]]
+    do
+      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n)"
+      echo
+      [[ "$REPLY" == [Yy]* ]] && rm $HOME/$dotfile
+    done
+    REPLY=''
+  fi
+
+  [[ ! -e "$HOME/$dotfile" ]] && echo "Installing $HOME/$dotfile" && \
+      ln -sn $DOTFILES_PATH/$dotfile $HOME/$dotfile
 done
 
 echo "Installing vundle plugins"
