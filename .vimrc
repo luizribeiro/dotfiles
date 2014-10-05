@@ -31,6 +31,13 @@ set showbreak=↪
 set ttyfast
 set showmatch
 
+" indent settings
+set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
 " Keyboard/Mouse settings
 set backspace=indent,eol,start
 set whichwrap=<,>,b,s,[,]
