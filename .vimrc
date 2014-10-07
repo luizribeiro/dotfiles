@@ -10,6 +10,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'hhvm/vim-hack'
+Plugin 'rbgrouleff/bclose.vim'
 call vundle#end()
 filetype plugin indent on
 
