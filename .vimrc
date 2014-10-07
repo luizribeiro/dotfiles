@@ -8,6 +8,7 @@ Plugin 'jlfwong/vim-arcanist'
 Plugin 'tpope/vim-eunuch'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'hhvm/vim-hack'
 call vundle#end()
 filetype plugin indent on
 
