@@ -12,6 +12,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'hhvm/vim-hack'
 Plugin 'rbgrouleff/bclose.vim'
 Plugin 'regedarek/ZoomWin'
+Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
 filetype plugin indent on
 
