@@ -30,7 +30,7 @@ do
   then
     while [[ "$REPLY" != [YyNn]* ]]
     do
-      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n)"
+      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n) "
       echo
       [[ "$REPLY" == [Yy]* ]] && rm $HOME/$dotfile
     done
