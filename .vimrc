@@ -101,15 +101,6 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 endif
 
-" Vim brain muscle
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
 inoremap <esc> <esc>`^
 nnoremap S ddko
 " I'm tired of going into :ex mode
