@@ -3,6 +3,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jlfwong/vim-arcanist'
 Plugin 'tpope/vim-eunuch'
@@ -207,31 +208,6 @@ nnoremap <leader>n :set relativenumber!<cr>
 
 " I hate plugin mappings
 let g:no_plugin_maps = 1
-
-" Switch seamlessly between tmux and vim windows
-if exists('$TMUX')
-  function! TmuxOrSplitSwitch(wincmd, tmuxdir)
-    let previous_winnr = winnr()
-    silent! execute "wincmd " . a:wincmd
-    if previous_winnr == winnr()
-      " The sleep and & gives time to get back to vim so tmux's focus tracking
-      " can kick in and send us our ^[[O
-      silent! execute
-      silent! call system("tmux select-pane -" . a:tmuxdir)
-      redraw!
-    endif
-  endfunction
-
-  nnoremap <silent> <C-h> :silent! call TmuxOrSplitSwitch('h', 'L')<cr>
-  nnoremap <silent> <C-j> :silent! call TmuxOrSplitSwitch('j', 'D')<cr>
-  nnoremap <silent> <C-k> :silent! call TmuxOrSplitSwitch('k', 'U')<cr>
-  nnoremap <silent> <C-l> :silent! call TmuxOrSplitSwitch('l', 'R')<cr>
-else
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
-endif
 
 map <C-w>% :sp<cr>
 map <C-w>" :vsp<cr>
