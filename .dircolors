@@ -17,6 +17,7 @@ TERM console
 TERM linux
 TERM rxvt-unicode
 TERM rxvt-unicode-256color
+TERM screen
 TERM urxvt
 TERM vt100
 TERM xterm
