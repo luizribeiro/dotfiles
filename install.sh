@@ -10,6 +10,7 @@ DOTFILES=(
   .dircolors
   .gitconfig
   .gitconfig.ignore
+  .gvimrc
   .hgconf
   .hgrc
   .tmux.conf
