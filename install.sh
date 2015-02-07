@@ -29,13 +29,13 @@ for dotfile in "${DOTFILES[@]}"
 do
   if [[ -e "$HOME/$dotfile" ]]
   then
-    while [[ "$REPLY" != [YyNn]* ]]
+    while [[ "$REPLY" != [YyNnAa]* ]]
     do
-      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n) "
+      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n/a) "
       echo
-      [[ "$REPLY" == [Yy]* ]] && rm $HOME/$dotfile
     done
-    REPLY=''
+    [[ "$REPLY" == [YyAa]* ]] && rm $HOME/$dotfile
+    [[ "$REPLY" != [Aa]* ]] && REPLY=''
   fi
 
   [[ ! -e "$HOME/$dotfile" ]] && echo "Installing $HOME/$dotfile" && \
