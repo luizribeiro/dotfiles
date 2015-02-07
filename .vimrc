@@ -32,7 +32,6 @@ set switchbuf=useopen,split
 set history=2000
 filetype plugin indent on
 let mapleader=","
-set timeoutlen=500
 set showbreak=↪
 set ttyfast
 set showmatch
@@ -103,7 +102,7 @@ if &term =~ "xterm" || &term =~ "screen"
 endif
 
 inoremap <esc> <esc>`^
-nnoremap S ddko
+nnoremap S ddO
 " I'm tired of going into :ex mode
 nnoremap Q <nop>
 
