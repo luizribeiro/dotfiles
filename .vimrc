@@ -75,6 +75,9 @@ match OverLength '\s\+$'
 " Tags setup
 set tags=tags;/
 
+" vim-jsx should be used for *.js too
+let g:jsx_ext_required=0
+
 " NERDTree settings
 let NERDTreeMinimalUI=1
 
