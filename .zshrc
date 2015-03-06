@@ -77,6 +77,13 @@ setopt hist_ignore_all_dups
 # disable flow control (ctrl+s freezes terminal)
 stty -ixon
 
+# use nvim by default when neovim is installed
+if (( $+commands[nvim] )) ; then
+  alias vim=nvim
+  alias vi=nvim
+  export TMUX_VIM_VIM_BIN=nvim
+fi
+
 # aliases
 LS_BIN=`command -v gls ls | head -1`
 alias ls='$LS_BIN -G -F --color=auto'
