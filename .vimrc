@@ -14,6 +14,7 @@ Plugin 'rbgrouleff/bclose.vim'
 Plugin 'regedarek/ZoomWin'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'solarnz/thrift.vim'
+Plugin 'Shougo/unite.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -67,7 +68,10 @@ colorscheme molokai
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufWinEnter * if &buftype != 'quickfix' | match OverLength /\%81v.\+/ | endif
+autocmd BufWinEnter *
+  \ if &buftype != 'quickfix' && &buftype != 'nofile' |
+  \ match OverLength /\%81v.\+/ |
+  \ endif
 syntax match tab display "\t"
 highlight link tab Error
 match OverLength '\s\+$'
@@ -92,17 +96,12 @@ nnoremap <leader>rall :bufdo! e!<CR>:source $MYVIMRC<CR>
 nnoremap < V<
 nnoremap > V>
 
-" command-t
-nnoremap <silent> <leader>b :CommandTBuffer<CR>
-nnoremap <silent> <Leader>t :CommandT<CR>
-let g:CommandTMaxHeight=20
-let g:CommandTInputDebounce=50
-let g:CommandTFileScanner='watchman'
-let g:CommandTMatchWindowReverse=1
-let g:CommandTHighlightColor='PmenuSel'
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-endif
+" Unite
+let g:unite_enable_start_insert=1
+call unite#custom#profile('default', 'context', {
+  \ 'direction': 'botright',
+  \ })
+nnoremap <silent> <leader>B :Unite buffer<CR>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
