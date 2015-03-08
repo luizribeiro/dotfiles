@@ -68,8 +68,8 @@ colorscheme molokai
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufWinEnter *
-  \ if &buftype != 'quickfix' && &buftype != 'nofile' |
+autocmd BufEnter *
+  \ if &buftype != 'quickfix' |
   \ match OverLength /\%81v.\+/ |
   \ endif
 syntax match tab display "\t"
@@ -86,7 +86,7 @@ let g:jsx_ext_required=0
 let NERDTreeMinimalUI=1
 
 " Mappings
-let g:no_plugin_maps=0
+let g:no_plugin_maps=1
 nnoremap <leader>d :Bclose<CR>
 nnoremap <silent> gn :NERDTreeFocus<CR>
 nnoremap <silent> gq :botright copen<CR>
@@ -98,14 +98,22 @@ nnoremap < V<
 nnoremap > V>
 
 " Unite
+nnoremap <silent> <leader>b :Unite buffer<CR>
+
 augroup UniteInit
-  let g:unite_enable_start_insert=1
-  let g:unite_no_default_keymappings=1
-  call unite#custom#profile('default', 'context', {
+  call unite#custom#profile('default','context', {
+    \ 'resize': 1,
     \ 'direction': 'botright',
+    \ 'no_split': 0,
     \ })
-  nnoremap <silent> <leader>b :Unite buffer<CR>
 augroup END
+
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  nmap <buffer> <esc> <Plug>(unite_exit)
+  nmap <buffer> <esc><esc> <Plug>(unite_exit)
+  match none /\%81v\+/
+endfunction
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
