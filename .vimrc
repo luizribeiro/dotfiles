@@ -10,7 +10,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'hhvm/vim-hack'
-Plugin 'rbgrouleff/bclose.vim'
+Plugin 'luizribeiro/bclose.vim'
 Plugin 'regedarek/ZoomWin'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'solarnz/thrift.vim'
@@ -86,7 +86,8 @@ let g:jsx_ext_required=0
 let NERDTreeMinimalUI=1
 
 " Mappings
-nnoremap <leader>bd :Bclose<CR>
+let g:no_plugin_maps=0
+nnoremap <leader>d :Bclose<CR>
 nnoremap <silent> gn :NERDTreeFocus<CR>
 nnoremap <silent> gq :botright copen<CR>
 nnoremap <leader>ev :edit $MYVIMRC<CR>
@@ -99,10 +100,11 @@ nnoremap > V>
 " Unite
 if exists(':Unite')
   let g:unite_enable_start_insert=1
+  let g:unite_no_default_keymappings=1
   call unite#custom#profile('default', 'context', {
     \ 'direction': 'botright',
     \ })
-  nnoremap <silent> <leader>B :Unite buffer<CR>
+  nnoremap <silent> <leader>b :Unite buffer<CR>
 endif
 
 inoremap <esc> <esc>`^
