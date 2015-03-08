@@ -98,14 +98,14 @@ nnoremap < V<
 nnoremap > V>
 
 " Unite
-if exists(':Unite')
+augroup UniteInit
   let g:unite_enable_start_insert=1
   let g:unite_no_default_keymappings=1
   call unite#custom#profile('default', 'context', {
     \ 'direction': 'botright',
     \ })
   nnoremap <silent> <leader>b :Unite buffer<CR>
-endif
+augroup END
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
