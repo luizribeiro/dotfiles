@@ -60,7 +60,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-autocmd TermResponse * nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<return><esc>
 
 " Colors setup
 set t_Co=256
