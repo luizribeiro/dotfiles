@@ -97,11 +97,13 @@ nnoremap < V<
 nnoremap > V>
 
 " Unite
-let g:unite_enable_start_insert=1
-call unite#custom#profile('default', 'context', {
-  \ 'direction': 'botright',
-  \ })
-nnoremap <silent> <leader>B :Unite buffer<CR>
+if exists(':Unite')
+  let g:unite_enable_start_insert=1
+  call unite#custom#profile('default', 'context', {
+    \ 'direction': 'botright',
+    \ })
+  nnoremap <silent> <leader>B :Unite buffer<CR>
+endif
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
