@@ -99,7 +99,9 @@ e() { tmux-vim e $* }
 tabnew() { tmux-vim tabnew $* }
 ta() { tmux-vim ta $* }
 send() { echo $* | nc localhost 52698 }
-alias pbcopy='sed 1i"copy" | nc localhost 52698'
+if (( !$+commands[pbcopy] )) ; then
+  alias pbcopy='sed 1i"copy" | nc localhost 52698'
+fi
 alias notify='send notify done'
 
 export GREP_COLOR='1;31'
