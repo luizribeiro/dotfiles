@@ -16,6 +16,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'solarnz/thrift.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'mhinz/vim-startify'
+Plugin 'jlfwong/vim-mercenary'
 call vundle#end()
 filetype plugin indent on
 
