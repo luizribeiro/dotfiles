@@ -71,13 +71,13 @@ colorscheme molokai
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufEnter *
-  \ if &buftype != 'quickfix' |
-  \ match OverLength /\%81v.\+/ |
-  \ endif
+autocmd BufEnter * match OverLength /\%81v.\+/
 syntax match tab display "\t"
 highlight link tab Error
 match OverLength '\s\+$'
+
+" filetypes that shouldn't highlight text past 80 chars
+autocmd FileType startify,qf,unite match none /\%81v.\+/
 
 " Tags setup
 set tags=tags;/
