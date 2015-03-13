@@ -100,6 +100,9 @@ nnoremap <leader>rall :bufdo! e!<CR>:source $MYVIMRC<CR>
 nnoremap < V<
 nnoremap > V>
 
+" Startify
+nnoremap <silent> <leader>S :Startify<cr>
+
 " Unite
 nnoremap <silent> <leader>b :Unite buffer<CR>
 
