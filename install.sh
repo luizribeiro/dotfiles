@@ -23,6 +23,7 @@ DOTFILES=(
 
 echo "Initializing dotfiles submodules..."
 cd $DOTFILES_PATH
+git submodule sync
 git submodule init
 git submodule update
 

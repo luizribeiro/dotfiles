@@ -3,4 +3,4 @@
 	url = http://github.com/gmarik/vundle.git
 [submodule ".bin/tmux-vim"]
 	path = .bin/tmux-vim
-	url = https://github.com/sdt/tmux-vim
+	url = https://github.com/luizribeiro/tmux-vim
