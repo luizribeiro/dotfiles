@@ -146,16 +146,15 @@ nnoremap <silent> <leader>b :Unite -buffer-name=buffers -start-insert buffer<cr>
 
 augroup UniteInit
   call unite#custom#profile('default','context', {
-    \ 'resize': 1,
+    \ 'resize': 0,
     \ 'direction': 'botright',
-    \ 'no_split': 0,
+    \ 'no_split': 1,
     \ })
 augroup END
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()
-  nmap <buffer> <esc> <Plug>(unite_exit)
-  nmap <buffer> <esc><esc> <Plug>(unite_exit)
+  nmap <buffer> <esc> <c-^>
   match none /\%81v\+/
 endfunction
 
