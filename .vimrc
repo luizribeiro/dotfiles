@@ -32,7 +32,6 @@ set wildmenu
 set wildmode=full:longest,full
 set laststatus=2
 set virtualedit=block
-set clipboard=unnamed
 set scrolloff=3
 set switchbuf=useopen,split
 set history=2000
@@ -41,6 +40,13 @@ let mapleader=","
 set showbreak=↪
 set ttyfast
 set showmatch
+
+" clipboard integration
+if !has('nvim')
+  " for some reason this only works on regular vim. need to fix my clipboard
+  " integration on neovim
+  set clipboard=unnamed
+endif
 
 " indent settings
 set autoindent
