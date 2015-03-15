@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'tejr/vim-tmux'
 Plugin 'bling/vim-airline'
+Plugin 'benmills/vimux'
 call vundle#end()
 filetype plugin indent on
 
@@ -294,18 +295,20 @@ command! -nargs=+ Require call append(line('.'), "var <args> = require('<args>')
 nnoremap <leader>rq :Require <c-r>=expand("<cword>")<cr><cr>j=$
 vnoremap <leader>rq y:Require <c-r><c-"><cr>j=$
 CommandCabbr require Require
-CommandCabbr R Require
 
 " add console.log
 command! -nargs=+ Clog call append(line('.'), "console.log('<args>', <args>);")
 nnoremap <leader>cl :Clog <c-r>=expand("<cword>")<cr><cr>j=$
 vnoremap <leader>cl y:Clog <c-r><c-"><cr>j=$
 CommandCabbr clog Clog
-CommandCabbr C Clog
 
 " handy keymaps
 nnoremap <leader>v :vsp<cr>
 nnoremap <leader>h :sp<cr>
+
+" vimux
+command! -nargs=+ C call VimuxRunCommand(<q-args>)
+CommandCabbr c C
 
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
