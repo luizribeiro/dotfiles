@@ -76,6 +76,17 @@ let g:airline_powerline_fonts=1
 let g:airline_inactive_collapse=0
 set noshowmode
 
+" I hate the delay when leaving insert mode on terminal
+set ttimeoutlen=0
+if !has('gui_running')
+  set timeoutlen=1000
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
+
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
 autocmd BufEnter * match OverLength /\%81v.\+/
