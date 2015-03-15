@@ -82,6 +82,9 @@ if (( $+commands[nvim] )) ; then
   alias vim=nvim
   alias vi=nvim
   export TMUX_VIM_VIM_BIN=nvim
+
+  # misc nvim settings
+  export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 fi
 
 # tmux-vim integration

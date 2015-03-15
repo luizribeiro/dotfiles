@@ -280,26 +280,6 @@ map Y y$
 nnoremap j gj
 nnoremap k gk
 
-" set cursor to a bar on insert mode
-au InsertEnter *
-  \ if v:insertmode == 'i' |
-  \   if exists('$TMUX') |
-  \     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\" |
-  \     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\" |
-  \   else |
-  \     let &t_SI = "\<Esc>]50;CursorShape=1\x7" |
-  \     let &t_EI = "\<Esc>]50;CursorShape=0\x7" |
-  \   endif |
-  \ else |
-  \   if exists('$TMUX') |
-  \     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\" |
-  \     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=a\x7\<Esc>\\" |
-  \   else |
-  \     let &t_SI = "\<Esc>]50;CursorShape=0\x7" |
-  \     let &t_EI = "\<Esc>]50;CursorShape=1\x7" |
-  \   endif |
-  \ endif
-
 " disable paste mode when leaving Insert mode
 au InsertLeave * set nopaste
 
