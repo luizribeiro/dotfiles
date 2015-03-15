@@ -17,7 +17,7 @@ Plugin 'solarnz/thrift.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jlfwong/vim-mercenary'
+Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'tejr/vim-tmux'
 Plugin 'bling/vim-airline'
 call vundle#end()
