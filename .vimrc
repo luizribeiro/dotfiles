@@ -18,6 +18,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'jlfwong/vim-mercenary'
 Plugin 'tejr/vim-tmux'
+Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
@@ -68,6 +69,12 @@ nnoremap <silent> <esc> :noh<return><esc>
 " Colors setup
 set t_Co=256
 colorscheme molokai
+
+" airline setup
+let g:airline_theme='dark'
+let g:airline_powerline_fonts=1
+let g:airline_inactive_collapse=0
+set noshowmode
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
