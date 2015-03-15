@@ -84,6 +84,15 @@ if (( $+commands[nvim] )) ; then
   export TMUX_VIM_VIM_BIN=nvim
 fi
 
+# tmux-vim integration
+export TMUX_VIM_LAYOUT='mode:shell,vim-pos:right,size:80'
+alias tmux-vim='~/.bin/tmux-vim/tmux-vim'
+sp() { tmux-vim sp $* }
+vsp() { tmux-vim vsp $* }
+e() { tmux-vim e $* }
+tabnew() { tmux-vim tabnew $* }
+ta() { tmux-vim ta $* }
+
 # aliases
 LS_BIN=`command -v gls ls | head -1`
 alias ls='$LS_BIN -G -F --color=auto'
@@ -93,11 +102,6 @@ alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
-sp() { tmux-vim sp $* }
-vsp() { tmux-vim vsp $* }
-e() { tmux-vim e $* }
-tabnew() { tmux-vim tabnew $* }
-ta() { tmux-vim ta $* }
 send() { echo $* | nc localhost 52698 }
 if (( !$+commands[pbcopy] )) ; then
   alias pbcopy='sed 1i"copy" | nc localhost 52698'
