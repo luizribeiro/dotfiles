@@ -76,7 +76,15 @@ let g:airline_theme='dark'
 let g:airline_powerline_fonts=1
 let g:airline_inactive_collapse=0
 let g:airline_section_x=''
+let g:airline_section_y=''
 set noshowmode
+
+" lawrencium shows the default branch on the statusline, which is useless
+" given my workflow
+let g:airline#extensions#branch#format = 'CustomBranchName'
+function! CustomBranchName(name)
+  return substitute(a:name, 'default - ', '', '')
+endfunction
 
 " I hate the delay when leaving insert mode on terminal
 set ttimeoutlen=0
