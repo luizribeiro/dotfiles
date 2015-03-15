@@ -118,7 +118,8 @@ let NERDTreeMinimalUI=1
 
 " Mappings
 let g:no_plugin_maps=1
-nnoremap <leader>d :Bclose<CR>
+nnoremap <silent> zq ZQ
+nnoremap <silent> <leader>d :Bclose<CR>
 nnoremap <silent> gn :NERDTreeFocus<CR>
 nnoremap <silent> gq :botright copen<CR>
 nnoremap <leader>ev :edit $MYVIMRC<CR>
