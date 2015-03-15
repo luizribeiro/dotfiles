@@ -112,7 +112,7 @@ highlight link tab Error
 match OverLength '\s\+$'
 
 " filetypes that shouldn't highlight text past 80 chars
-autocmd FileType startify,qf,unite match none /\%81v.\+/
+autocmd FileType startify,qf,unite,hglog match none /\%81v.\+/
 
 " Tags setup
 set tags=tags;/
