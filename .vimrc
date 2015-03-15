@@ -142,7 +142,7 @@ highlight StartifySlash ctermfg=240
 highlight StartifySpecial ctermfg=240
 
 " Unite
-nnoremap <silent> <leader>b :Unite buffer<CR>
+nnoremap <silent> <leader>b :Unite -buffer-name=buffers -start-insert buffer<cr>
 
 augroup UniteInit
   call unite#custom#profile('default','context', {
