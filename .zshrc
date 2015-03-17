@@ -77,10 +77,12 @@ setopt hist_ignore_all_dups
 # disable flow control (ctrl+s freezes terminal)
 stty -ixon
 
+export EDITOR=vim
 # use nvim by default when neovim is installed
 if (( $+commands[nvim] )) ; then
   alias vim=nvim
   alias vi=nvim
+  export EDITOR=nvim
   export TMUX_VIM_VIM_BIN=nvim
 
   # misc nvim settings
@@ -121,7 +123,6 @@ export PATH="$HOME/.bin:$PATH"
 
 setopt correctall
 
-export EDITOR=vim
 alias back='cd "$OLDPWD"'
 
 if [ "$SSH_AUTH_SOCK" != "/tmp/ssh-agent-$USER-screen" ]; then
