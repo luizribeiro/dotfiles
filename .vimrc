@@ -243,6 +243,10 @@ autocmd FileType php syn region phpRegion matchgroup=Delimiter start="<?hh"
     \ end="?>" contains=@phpClTop
 autocmd FileType php syn keyword phpStructure use trait
 
+" Hack omni-completion
+let g:hack#omnifunc=1
+autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
+
 inoremap {<CR> {<CR>}<Esc>O
 inoremap (<CR> (<CR><BS>)<Esc>O
 
