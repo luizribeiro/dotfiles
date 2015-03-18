@@ -1,2 +1,2 @@
 set guioptions-=rL
-set guifont=Menlo\ Regular:h12
+set guifont=Liberation\ Mono\ for\ Powerline:h12
