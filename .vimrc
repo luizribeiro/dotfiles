@@ -95,6 +95,7 @@ function! CustomBranchName(name)
 endfunction
 
 " I hate the delay when leaving insert mode on terminal
+set ttimeout
 set ttimeoutlen=0
 if !has('gui_running')
   set timeoutlen=1000
