@@ -20,8 +20,9 @@ Optionally, you can create the following files to customize things locally:
 
 ### OS X
 
-If you're using OS X, you'll need to install the GNU Core Utilities first:
+If you're using OS X, you'll need to install the GNU Core Utilities and a few
+dependencies first:
 
 ```
-brew install coreutils
+brew install coreutils neovim tmux zsh
 ```
