@@ -24,5 +24,12 @@ If you're using OS X, you'll need to install the GNU Core Utilities and a few
 dependencies first:
 
 ```
-brew install coreutils neovim tmux zsh
+brew install coreutils tmux zsh
+```
+
+[neovim](http://neovim.org/) can be installed with:
+
+```
+brew tap neovim/homebrew-neovim
+brew install --HEAD neovim
 ```
