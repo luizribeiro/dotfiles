@@ -13,6 +13,7 @@ DOTFILES=(
   .gvimrc
   .hgconf
   .hgrc
+  .htoprc
   .nvim
   .nvimrc
   .tmux.conf
