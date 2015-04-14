@@ -23,6 +23,7 @@ Plugin 'tejr/vim-tmux'
 Plugin 'bling/vim-airline'
 Plugin 'benmills/vimux'
 Plugin 'goldfeld/ctrlr.vim'
+Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
 
@@ -316,6 +317,9 @@ nnoremap <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
