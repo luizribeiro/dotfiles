@@ -22,7 +22,6 @@ Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'tejr/vim-tmux'
 Plugin 'bling/vim-airline'
 Plugin 'benmills/vimux'
-Plugin 'goldfeld/ctrlr.vim'
 Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
