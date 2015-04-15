@@ -318,7 +318,11 @@ command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
 
 " supertab
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabLeadingSpaceCompletion = 0
+let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType ="<c-x><c-o>"
 
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
