@@ -23,6 +23,7 @@ Plugin 'tejr/vim-tmux'
 Plugin 'bling/vim-airline'
 Plugin 'benmills/vimux'
 Plugin 'ervandew/supertab'
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype plugin indent on
 
@@ -250,9 +251,6 @@ autocmd FileType php syn keyword phpStructure use trait
 let g:hack#omnifunc=1
 autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
 
-inoremap {<CR> {<CR>}<Esc>O
-inoremap (<CR> (<CR><BS>)<Esc>O
-
 " Listener/send stuff {{{
 function! Send(cmd, param)
   call system('nc localhost 52698', a:cmd.' '.a:param)
@@ -323,6 +321,10 @@ let g:SuperTabLeadingSpaceCompletion = 0
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType ="<c-x><c-o>"
+
+" delimMate
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
 
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
