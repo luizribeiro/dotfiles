@@ -18,6 +18,8 @@ DOTFILES=(
   .nvimrc
   .tmux.conf
   .vim
+  .vimperator
+  .vimperatorrc
   .vimrc
   .zshrc
 )
