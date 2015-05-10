@@ -1,1 +1,4 @@
 set gui=none,tabs
+
+noremap j 4j
+noremap k 4k
