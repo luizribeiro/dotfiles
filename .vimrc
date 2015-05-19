@@ -25,6 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'benmills/vimux'
 Plugin 'ervandew/supertab'
 Plugin 'Raimondi/delimitMate'
+Plugin 'reedes/vim-pencil'
 call vundle#end()
 filetype plugin indent on
 
@@ -52,6 +53,14 @@ if !has('nvim')
   " integration on neovim
   set clipboard=unnamed
 endif
+
+" vim-pencil settings
+let g:pencil#autoformat = 1
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text call pencil#init()
+augroup END
 
 " indent settings
 set autoindent
