@@ -9,7 +9,8 @@ fi
 WATCHMAN_QUERY='["query", ".", {
   "expression": ["allof",
   ["type", "f"],
-  ["not", "empty"]
+  ["not", "empty"],
+  ["not", ["suffix", "orig"]]
   ],
   "fields": ["name"]
 }]'
