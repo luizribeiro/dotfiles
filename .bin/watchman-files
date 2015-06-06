@@ -1,19 +1,41 @@
 #!/bin/bash
 
+# you can setup .watchman-files to be automatically created by watchman by
+# running this:
+#
+#   watchman -- trigger . watchman-files -X '.hg*' '.watchman-files' -- watchman-files --force
+#
+# to stop, run this:
+#
+#   watchman trigger-del . watchman-files
+
 if [ ! -f .watchmanconfig ]
 then
   echo "This directory isn't tracked by Watchman"
   exit
 fi
 
-WATCHMAN_QUERY='["query", ".", {
-  "expression": ["allof",
-  ["type", "f"],
-  ["not", "empty"],
-  ["not", ["suffix", "orig"]]
-  ],
-  "fields": ["name"]
-}]'
+query() {
+  WATCHMAN_QUERY='["query", ".", {
+    "expression": ["allof",
+    ["type", "f"],
+    ["not", "empty"],
+    ["not", ["suffix", "orig"]],
+    ["not", ["dirname", ".hg", ["depth", "ge", 0]]],
+    ["not", ["dirname", ".git", ["depth", "ge", 0]]]
+    ],
+    "fields": ["name"]
+  }]'
+
+  # TODO: get rid of the jq dependency to make this a little faster
+  echo $WATCHMAN_QUERY | watchman -j | jq -r ".files[]"
+}
+
+if [ "$1" = "--force" ]
+then
+  query / > .watchman-files
+  exit
+fi
 
 if [ -f .watchman-files ] && [ ! `find ".watchman-files" -mmin +15` ]
 then
@@ -21,4 +43,4 @@ then
   exit
 fi
 
-echo $WATCHMAN_QUERY | watchman -j | jq -r ".files[]" | tee .watchman-files
+query / | tee .watchman-files
