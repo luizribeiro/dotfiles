@@ -15,8 +15,7 @@ Plugin 'luizribeiro/bclose.vim'
 Plugin 'regedarek/ZoomWin'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'solarnz/thrift.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
+Plugin 'junegunn/fzf'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
@@ -120,13 +119,14 @@ endif
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufNew * match OverLength /\%81v.\+/
+autocmd BufNew * if &buftype != 'nofile' | match Overlength /\%81v.\+/ | endif
 syntax match tab display "\t"
 highlight link tab Error
 match OverLength '\s\+$'
 
 " filetypes that shouldn't highlight text past 80 chars
-autocmd FileType startify,qf,unite,hglog match none /\%81v.\+/
+autocmd FileType startify,qf,hglog match none /\%81v.\+/
+"autocmd TermOpen * match none /\%81v.\+/
 
 " Tags setup
 set tags=tags;/
@@ -164,22 +164,34 @@ highlight StartifyPath ctermfg=245
 highlight StartifySlash ctermfg=240
 highlight StartifySpecial ctermfg=240
 
-" Unite
-nnoremap <silent> <leader>b :Unite -buffer-name=buffers -start-insert buffer<cr>
+" fzf
+let g:fzf_height = '20%'
+nnoremap <leader>f :FZF -m -x<cr>
 
-augroup UniteInit
-  call unite#custom#profile('default','context', {
-    \ 'resize': 0,
-    \ 'direction': 'botright',
-    \ 'no_split': 1,
-    \ })
-augroup END
-
-autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()
-  nmap <buffer> <esc> <c-^>
-  match none /\%81v\+/
+" fzf buffer list
+function! BufList()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
 endfunction
+function! BufOpen(e)
+  execute 'buffer '. matchstr(a:e, '^[ 0-9 ]*')
+endfunction
+nnoremap <silent> <leader>b :call fzf#run({
+      \   'source': reverse(BufList()),
+      \   'sink': function('BufOpen'),
+      \   'options': '-m -x',
+      \   'tmux_height': '20%'
+      \ })<cr>
+
+" fzf mru
+nnoremap <silent> <leader>m :call fzf#run({
+      \ 'source': v:oldfiles,
+      \ 'sink' : 'e ',
+      \ 'options' : '-m -x',
+      \ 'tmux_height': '20%'
+      \})<cr>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
