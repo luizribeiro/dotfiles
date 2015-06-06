@@ -198,6 +198,21 @@ nnoremap S ddO
 " I'm tired of going into :ex mode
 nnoremap Q <nop>
 
+" fzf watchman
+function! FZFWatchman(dir)
+  if file_readable('.watchmanconfig')
+    call fzf#run({
+        \ 'source': 'watchman-files',
+        \ 'sink' : 'e ',
+        \ 'options' : '-m -x',
+        \ 'tmux_height': '20%'
+        \})
+  else
+    FZF -m -x a:dir
+  endif
+endfunction
+nnoremap <silent> <leader>f :call FZFWatchman('<args>')<cr>
+
 " Quicker access to command line from normal mode
 noremap ; :
 vnoremap ; :

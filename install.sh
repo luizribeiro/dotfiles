@@ -13,6 +13,7 @@ DOTFILES=(
   .gvimrc
   .hgconf
   .hgrc
+  .hgrc.ignore
   .htoprc
   .nvim
   .nvimrc

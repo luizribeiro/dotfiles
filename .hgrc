@@ -22,3 +22,6 @@ disable = status
 
 [diff]
 git = True
+
+[ui]
+ignore = ~/.hgrc.ignore

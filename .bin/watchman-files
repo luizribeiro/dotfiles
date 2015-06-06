@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ ! -f .watchmanconfig ]
+then
+  echo "This directory isn't tracked by Watchman"
+  exit
+fi
+
+WATCHMAN_QUERY='["query", ".", {
+  "expression": ["allof",
+  ["type", "f"],
+  ["not", "empty"]
+  ],
+  "fields": ["name"]
+}]'
+
+if [ -f .watchman-files ] && [ ! `find ".watchman-files" -mmin +15` ]
+then
+  cat .watchman-files
+  exit
+fi
+
+echo $WATCHMAN_QUERY | watchman -j | jq -r ".files[]" | tee .watchman-files
