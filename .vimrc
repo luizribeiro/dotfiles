@@ -166,7 +166,6 @@ highlight StartifySpecial ctermfg=240
 
 " fzf
 let g:fzf_height = '20%'
-nnoremap <leader>f :FZF -m -x<cr>
 
 " fzf buffer list
 function! BufList()
@@ -199,7 +198,7 @@ nnoremap S ddO
 nnoremap Q <nop>
 
 " fzf watchman
-function! FZFWatchman(dir)
+function! FZFWatchman()
   if file_readable('.watchmanconfig')
     call fzf#run({
         \ 'source': 'watchman-files',
@@ -208,10 +207,10 @@ function! FZFWatchman(dir)
         \ 'tmux_height': '20%'
         \})
   else
-    FZF -m -x a:dir
+    FZF -m -x
   endif
 endfunction
-nnoremap <silent> <leader>f :call FZFWatchman('<args>')<cr>
+nnoremap <silent> <leader>f :call FZFWatchman()<cr>
 
 " Quicker access to command line from normal mode
 noremap ; :
