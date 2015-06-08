@@ -1,32 +1,27 @@
-" Vundle plugins
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jlfwong/vim-arcanist'
-Plugin 'tpope/vim-eunuch'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'hhvm/vim-hack'
-Plugin 'facebook/vim-flow'
-Plugin 'luizribeiro/bclose.vim'
-Plugin 'regedarek/ZoomWin'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'solarnz/thrift.vim'
-Plugin 'junegunn/fzf'
-Plugin 'mhinz/vim-startify'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ludovicchabant/vim-lawrencium'
-Plugin 'tejr/vim-tmux'
-Plugin 'bling/vim-airline'
-Plugin 'benmills/vimux'
-Plugin 'ervandew/supertab'
-Plugin 'Raimondi/delimitMate'
-Plugin 'reedes/vim-pencil'
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.vim/bundle')
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'scrooloose/nerdtree'
+Plug 'jlfwong/vim-arcanist'
+Plug 'tpope/vim-eunuch'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'hhvm/vim-hack'
+Plug 'facebook/vim-flow'
+Plug 'luizribeiro/bclose.vim'
+Plug 'regedarek/ZoomWin'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'solarnz/thrift.vim'
+Plug 'junegunn/fzf'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-fugitive'
+Plug 'ludovicchabant/vim-lawrencium'
+Plug 'tejr/vim-tmux'
+Plug 'bling/vim-airline'
+Plug 'benmills/vimux'
+Plug 'ervandew/supertab'
+Plug 'Raimondi/delimitMate'
+Plug 'reedes/vim-pencil'
+call plug#end()
 
 " General settings
 set nocompatible

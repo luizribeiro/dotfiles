@@ -50,6 +50,6 @@ do
 done
 
 echo "Installing vundle plugins"
-vim +BundleInstall +qall
+vim +PlugInstall +qall
 
 cd $OLD_PATH
