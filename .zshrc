@@ -154,6 +154,26 @@ prompt_gentoo_setup () {
 
 prompt_gentoo_setup "$@"
 
+# fzf file select
+__fsel() {
+  set -o nonomatch
+  find * -path '*/\.*' -prune \
+    -o -type f -print \
+    -o -type d -print \
+    -o -type l -print 2> /dev/null | fzf-tmux -x -m -d "20%" | while read item; do
+    printf '%q ' "$item"
+  done
+  echo
+}
+fzf-file-select() {
+  # see https://github.com/wellle/dotfiles/blob/master/fzf.zsh
+  # TODO: this could probably be cleaner
+  LBUFFER="${LBUFFER%% #}$(__fsel)"
+  zle redisplay
+}
+zle     -N   fzf-file-select
+bindkey '^t' fzf-file-select
+
 # vim tags
 function _get_tags {
   [ -f ./tags ] || return
