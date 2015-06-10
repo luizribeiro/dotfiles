@@ -41,6 +41,10 @@ set showbreak=↪
 set ttyfast
 set showmatch
 
+" disable backup and swap files
+set nobackup
+set noswapfile
+
 " clipboard integration
 if !has('nvim')
   " for some reason this only works on regular vim. need to fix my clipboard
