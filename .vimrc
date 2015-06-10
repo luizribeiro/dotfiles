@@ -1,16 +1,16 @@
 call plug#begin('~/.vim/bundle')
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'scrooloose/nerdtree'
-Plug 'jlfwong/vim-arcanist'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFocus' }
+Plug 'jlfwong/vim-arcanist', { 'on': 'ArcInlines' }
 Plug 'tpope/vim-eunuch'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'hhvm/vim-hack'
-Plug 'facebook/vim-flow'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'hhvm/vim-hack', { 'for': 'php' }
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'luizribeiro/bclose.vim'
 Plug 'regedarek/ZoomWin'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'solarnz/thrift.vim'
+Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'junegunn/fzf'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
