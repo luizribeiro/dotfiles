@@ -37,6 +37,7 @@ set switchbuf=useopen,split
 set history=2000
 filetype plugin indent on
 let mapleader=","
+nmap <space> ,
 set showbreak=↪
 set ttyfast
 set showmatch
