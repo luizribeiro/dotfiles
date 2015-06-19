@@ -33,7 +33,11 @@ query() {
 
 if [ "$1" = "--force" ]
 then
-  query / > .watchman-files
+  query / > .watchman-files.new
+  if [ -s .watchman-files.new ]
+  then
+    mv .watchman-files.new .watchman-files
+  fi
   exit
 fi
 
@@ -43,4 +47,8 @@ then
   exit
 fi
 
-query / | tee .watchman-files
+query / | tee .watchman-files.new
+if [ -s .watchman-files.new ]
+then
+  mv .watchman-files.new .watchman-files
+fi
