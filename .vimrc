@@ -84,7 +84,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <esc> :noh<return><esc>
+nnoremap <silent> <esc> :noh<cr>:echo<cr><esc>
 
 " Colors setup
 set t_Co=256
