@@ -310,8 +310,8 @@ nnoremap <leader>n :set relativenumber!<cr>
 " I hate plugin mappings
 let g:no_plugin_maps = 1
 
-map <C-w>% :sp<cr>
-map <C-w>" :vsp<cr>
+nnoremap <silent> <C-w>% :sp<cr>
+nnoremap <silent> <C-w>" :vsp<cr>
 
 set splitright
 set splitbelow
@@ -345,8 +345,8 @@ vnoremap <leader>cl y:Clog <c-r><c-"><cr>j=$
 CommandCabbr clog Clog
 
 " handy keymaps
-nnoremap <leader>v :vsp<cr>
-nnoremap <leader>h :sp<cr>
+nnoremap <silent> <leader>v :vsp<cr>
+nnoremap <silent> <leader>h :sp<cr>
 
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
