@@ -1,3 +1,6 @@
+let g:python_host_skip_check=1
+let g:loaded_python3_provider=1
+
 call plug#begin('~/.vim/bundle')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFocus' }
