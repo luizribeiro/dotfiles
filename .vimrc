@@ -24,6 +24,7 @@ Plug 'benmills/vimux'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
+Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.py --clang-completer' }
 call plug#end()
 
 " General settings
@@ -354,6 +355,10 @@ nnoremap <silent> <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
+
+" ycm stuff
+autocmd! User YouCompleteMe call youcompleteme#Enable()
+let g:ycm_confirm_extra_conf = 0
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
