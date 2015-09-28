@@ -214,6 +214,7 @@ function! FZFWatchman()
     FZF -m -x
   endif
 endfunction
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 nnoremap <silent> <leader>f :call FZFWatchman()<cr>
 
 " Quicker access to command line from normal mode
