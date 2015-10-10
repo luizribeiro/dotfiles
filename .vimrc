@@ -123,7 +123,8 @@ endif
 
 " Highlight tabs, text past 80 chars and trailing spaces
 highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufNew * if &buftype != 'nofile' | match Overlength /\%81v.\+/ | endif
+autocmd BufNew * if &buftype != 'nofile' && &buftype != 'terminal'
+      \ | match Overlength /\%81v.\+/ | endif
 syntax match tab display "\t"
 highlight link tab Error
 match OverLength '\s\+$'
