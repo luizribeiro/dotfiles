@@ -7,6 +7,7 @@ popd > /dev/null
 
 DOTFILES=(
   .bin
+  .config/nvim
   .dircolors
   .gitconfig
   .gitconfig.ignore
