@@ -25,6 +25,7 @@ Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
 Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.py --clang-completer' }
+Plug 'whatyouhide/vim-lengthmatters'
 call plug#end()
 
 " General settings
@@ -120,14 +121,6 @@ if !has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
-
-" Highlight tabs, text past 80 chars and trailing spaces
-highlight OverLength ctermbg=52 guibg=#592929
-autocmd BufNew * if &buftype != 'nofile' && &buftype != 'terminal'
-      \ | match Overlength /\%81v.\+/ | endif
-syntax match tab display "\t"
-highlight link tab Error
-match OverLength '\s\+$'
 
 " filetypes that shouldn't highlight text past 80 chars
 autocmd FileType startify,qf,hglog match none /\%81v.\+/
