@@ -26,6 +26,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
 Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.py --clang-completer' }
 Plug 'whatyouhide/vim-lengthmatters'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " General settings
@@ -72,6 +73,17 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+let g:indentLine_char='¦'
+let g:indentLine_color_term=235
+
+" folding settings
+set foldmethod=indent
+autocmd User Startified set foldlevel=10000
+nnoremap <silent> <leader>f0 :set foldlevel=0<cr>
+nnoremap <silent> <leader>f1 :set foldlevel=1<cr>
+nnoremap <silent> <leader>f2 :set foldlevel=2<cr>
+nnoremap <silent> <leader>f3 :set foldlevel=3<cr>
+nnoremap <silent> <leader>f4 :set foldlevel=4<cr>
 
 " Keyboard/Mouse settings
 set backspace=indent,eol,start
