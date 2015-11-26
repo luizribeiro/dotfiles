@@ -27,6 +27,7 @@ Plug 'reedes/vim-pencil'
 Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.py --clang-completer' }
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 " General settings
