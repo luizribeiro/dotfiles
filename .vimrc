@@ -77,6 +77,9 @@ set tabstop=2
 let g:indentLine_char='¦'
 let g:indentLine_color_term=235
 
+" signify settings
+let g:signify_vcs_list=['hg', 'git']
+
 " folding settings
 set foldmethod=indent
 set foldlevelstart=99
