@@ -130,17 +130,21 @@ if &t_Co > 255
   hi Define          ctermfg=81
   hi Delimiter       ctermfg=241
 
-  hi DiffAdd         ctermfg=82 ctermbg=235
-  hi DiffChange      ctermfg=24 ctermbg=235
-  hi DiffDelete      ctermfg=1  ctermbg=235
-  hi DiffText                    ctermbg=102 cterm=bold
+  hi DiffAdd         ctermfg=234 ctermbg=112
+  hi DiffDelete      ctermfg=234 ctermbg=1
+  hi DiffChange      ctermfg=181 ctermbg=236
+  hi DiffText                    ctermbg=237 cterm=bold
+
+  hi SignifySignAdd    ctermfg=82  ctermbg=235
+  hi SignifySignChange ctermfg=240 ctermbg=235
+  hi SignifySignDelete ctermfg=1   ctermbg=235
 
   hi Directory       ctermfg=118               cterm=bold
   hi Error           ctermfg=219 ctermbg=89
   hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=bold
   hi Exception       ctermfg=118               cterm=bold
   hi Float           ctermfg=135
-  hi FoldColumn      ctermfg=67  ctermbg=16
+  hi FoldColumn      ctermfg=240  ctermbg=235
   hi Folded          ctermfg=245  ctermbg=235
   hi Function        ctermfg=118
   hi Identifier      ctermfg=208               cterm=none
