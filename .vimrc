@@ -78,7 +78,7 @@ let g:indentLine_color_term=235
 
 " folding settings
 set foldmethod=indent
-autocmd User Startified set foldlevel=10000
+set foldlevelstart=99
 nnoremap <silent> <leader>f0 :set foldlevel=0<cr>
 nnoremap <silent> <leader>f1 :set foldlevel=1<cr>
 nnoremap <silent> <leader>f2 :set foldlevel=2<cr>
