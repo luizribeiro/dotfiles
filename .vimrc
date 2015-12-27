@@ -3,7 +3,7 @@ let g:loaded_python3_provider=1
 
 call plug#begin('~/.vim/bundle')
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFocus' }
+Plug 'tpope/vim-vinegar'
 Plug 'jlfwong/vim-arcanist', { 'on': 'ArcInlines' }
 Plug 'tpope/vim-eunuch'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -148,15 +148,11 @@ set tags=tags;/
 " vim-jsx should be used for *.js too
 let g:jsx_ext_required=0
 
-" NERDTree settings
-let NERDTreeMinimalUI=1
-
 " Mappings
 let g:no_plugin_maps=1
 nnoremap <silent> zq ZQ
 nnoremap <silent> <leader>db :Bclose<CR>
 nnoremap <silent> <leader>DB :1,1000bd<cr>
-nnoremap <silent> gn :NERDTreeFocus<CR>
 nnoremap <silent> gq :botright copen<CR>
 nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
