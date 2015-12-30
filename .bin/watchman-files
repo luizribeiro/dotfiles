@@ -28,7 +28,7 @@ query() {
   }]'
 
   # TODO: get rid of the jq dependency to make this a little faster
-  echo $WATCHMAN_QUERY | watchman -j | jq -r ".files[]"
+  echo "$WATCHMAN_QUERY" | watchman -j | jq -r ".files[]"
 }
 
 if [ "$1" = "--force" ]
