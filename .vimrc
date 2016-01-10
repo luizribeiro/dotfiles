@@ -30,6 +30,9 @@ Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
+" disable for terminal buffers in neovim
+autocmd! TermOpen * LengthmattersDisable
+
 " General settings
 set nocompatible
 set showcmd
@@ -188,7 +191,7 @@ function! FZFWatchman()
     GitFiles
   endif
 endfunction
-nnoremap <leader>f :call FZFWatchman()<cr>
+nnoremap <silent> <leader>f :call FZFWatchman()<cr>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
