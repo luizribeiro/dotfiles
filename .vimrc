@@ -15,6 +15,7 @@ Plug 'regedarek/ZoomWin'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-lawrencium'
@@ -82,11 +83,11 @@ let g:signify_vcs_list=['hg', 'git']
 " folding settings
 set foldmethod=indent
 set foldlevelstart=99
-nnoremap <silent> <leader>f0 :set foldlevel=0<cr>
-nnoremap <silent> <leader>f1 :set foldlevel=1<cr>
-nnoremap <silent> <leader>f2 :set foldlevel=2<cr>
-nnoremap <silent> <leader>f3 :set foldlevel=3<cr>
-nnoremap <silent> <leader>f4 :set foldlevel=4<cr>
+nnoremap <silent> <leader>F0 :set foldlevel=0<cr>
+nnoremap <silent> <leader>F1 :set foldlevel=1<cr>
+nnoremap <silent> <leader>F2 :set foldlevel=2<cr>
+nnoremap <silent> <leader>F3 :set foldlevel=3<cr>
+nnoremap <silent> <leader>F4 :set foldlevel=4<cr>
 
 " Keyboard/Mouse settings
 set backspace=indent,eol,start
@@ -137,10 +138,6 @@ if !has('gui_running')
   augroup END
 endif
 
-" filetypes that shouldn't highlight text past 80 chars
-autocmd FileType startify,qf,hglog match none /\%81v.\+/
-"autocmd TermOpen * match none /\%81v.\+/
-
 " Tags setup
 set tags=tags;/
 
@@ -174,53 +171,29 @@ highlight StartifySlash ctermfg=240
 highlight StartifySpecial ctermfg=240
 
 " fzf
-let g:fzf_height = '20%'
+let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_nvim_statusline = 0
+nnoremap <silent> <leader>b :Buffers<cr>
+nnoremap <silent> <leader>m :History<cr>
 
-" fzf buffer list
-function! BufList()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
+" fzf watchman
+function! FZFWatchman()
+  if file_readable('.watchmanconfig')
+    let opts = copy(get(g:, 'fzf_layout', g:fzf#vim#default_layout))
+    call fzf#run(extend(opts, fzf#vim#wrap({
+    \ 'source': 'watchman-files',
+    \ 'options': '-m --prompt "watchman> "'
+    \ })))
+  else
+    GitFiles
+  endif
 endfunction
-function! BufOpen(e)
-  execute 'buffer '. matchstr(a:e, '^[ 0-9 ]*')
-endfunction
-nnoremap <silent> <leader>b :call fzf#run({
-      \   'source': reverse(BufList()),
-      \   'sink': function('BufOpen'),
-      \   'options': '-m -x',
-      \   'tmux_height': '20%'
-      \ })<cr>
-
-" fzf mru
-nnoremap <silent> <leader>m :call fzf#run({
-      \ 'source': v:oldfiles,
-      \ 'sink' : 'e ',
-      \ 'options' : '-m -x',
-      \ 'tmux_height': '20%'
-      \})<cr>
+nnoremap <leader>f :call FZFWatchman()<cr>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
 " I'm tired of going into :ex mode
 nnoremap Q <nop>
-
-" fzf watchman
-function! FZFWatchman()
-  if file_readable('.watchmanconfig')
-    call fzf#run({
-        \ 'source': 'watchman-files',
-        \ 'sink' : 'e ',
-        \ 'options' : '-m -x',
-        \ 'tmux_height': '20%'
-        \})
-  else
-    FZF -m -x
-  endif
-endfunction
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
-nnoremap <silent> <leader>f :call FZFWatchman()<cr>
 
 " Quicker access to command line from normal mode
 noremap ; :
