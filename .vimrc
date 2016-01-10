@@ -31,7 +31,9 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " disable for terminal buffers in neovim
-autocmd! TermOpen * LengthmattersDisable
+augroup LengthmattersFix
+  autocmd! TermOpen * LengthmattersDisable
+augroup END
 
 " General settings
 set nocompatible
@@ -262,17 +264,20 @@ function! s:Function(name)
 endfunction
 noremap g] :exe ":Function " . expand("<cword>")<CR>
 
-" Some quickfix settings
-autocmd BufReadPost quickfix setlocal cursorline nonumber nowrap
-
-" Better Hack syntax highlighting (I should add this to after/ eventually)
-autocmd FileType php syn region phpRegion matchgroup=Delimiter start="<?hh"
-    \ end="?>" contains=@phpClTop
-autocmd FileType php syn keyword phpStructure use trait
+augroup QuickfixSettings
+  autocmd BufReadPost quickfix setlocal cursorline nonumber nowrap
+augroup END
 
 " Hack omni-completion
 let g:hack#omnifunc=1
-autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
+augroup HackTweaks
+  " Better Hack syntax highlighting (I should add this to after/ eventually)
+  autocmd FileType php syn region phpRegion matchgroup=Delimiter start="<?hh"
+      \ end="?>" contains=@phpClTop
+  autocmd FileType php syn keyword phpStructure use trait
+
+  autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
+augroup END
 
 " Listener/send stuff {{{
 function! Send(cmd, param)
@@ -339,7 +344,9 @@ command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
 
 " ycm stuff
-autocmd! User YouCompleteMe call youcompleteme#Enable()
+augroup YCMSettings
+  autocmd! User YouCompleteMe call youcompleteme#Enable()
+augroup END
 let g:ycm_confirm_extra_conf = 0
 
 " supertab
