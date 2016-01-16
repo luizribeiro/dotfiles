@@ -205,6 +205,7 @@ function! FZFWatchman()
   endif
 endfunction
 nnoremap <silent> <leader>f :call FZFWatchman()<cr>
+nnoremap <silent> <leader><leader>f :Files %:p:h<cr>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
