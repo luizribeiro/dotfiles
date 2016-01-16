@@ -3,6 +3,7 @@ let g:loaded_python3_provider=1
 
 call plug#begin('~/.vim/bundle')
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-vinegar'
 Plug 'jlfwong/vim-arcanist', { 'on': 'ArcInlines' }
 Plug 'tpope/vim-eunuch'
@@ -123,6 +124,16 @@ let g:airline_inactive_collapse=0
 let g:airline_section_x=''
 let g:airline_section_y=''
 set noshowmode
+
+" fake inactive vim-airline setup
+let g:__original = g:airline#themes#{g:airline_theme}#palette.normal
+autocmd FocusLost *
+      \ let g:__original = g:airline#themes#{g:airline_theme}#palette.normal
+      \ | let g:airline#themes#{g:airline_theme}#palette.normal = g:airline#themes#{g:airline_theme}#palette.inactive
+      \ | AirlineRefresh
+autocmd FocusGained *
+      \ let g:airline#themes#{g:airline_theme}#palette.normal = g:__original
+      \ | AirlineRefresh
 
 " lawrencium shows the default branch on the statusline, which is useless
 " given my workflow
