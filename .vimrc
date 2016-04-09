@@ -32,9 +32,11 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " disable for terminal buffers in neovim
-augroup LengthmattersFix
-  autocmd! TermOpen * LengthmattersDisable
-augroup END
+if has('nvim')
+  augroup LengthmattersFix
+    autocmd! TermOpen * LengthmattersDisable
+  augroup END
+endif
 
 " General settings
 set nocompatible
