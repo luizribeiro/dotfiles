@@ -32,6 +32,8 @@ git submodule sync
 git submodule init
 git submodule update
 
+mkdir -p "$HOME/.config"
+
 echo "Linking config files to $HOME..."
 for dotfile in "${DOTFILES[@]}"
 do

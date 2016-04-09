@@ -24,12 +24,26 @@ If you're using OS X, you'll need to install the GNU Core Utilities and a few
 dependencies first:
 
 ```
-brew install coreutils tmux zsh
+brew install coreutils tmux zsh fzf
 ```
 
 [neovim](http://neovim.org/) can be installed with:
 
 ```
-brew tap neovim/homebrew-neovim
-brew install --HEAD neovim
+brew install neovim/neovim/neovim
+```
+
+While you're at it, install these too:
+
+```
+brew install mosh wget htop
+brew cask install iterm2 dropbox
+```
+
+And, of course, install powerline fonts:
+
+```
+git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh
 ```
