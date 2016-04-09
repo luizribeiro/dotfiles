@@ -3,3 +3,4 @@
 .vim/bundle/
 .vimperator/info/
 .vim/autoload/plug.vim.old
+osx/alfred/Alfred.alfredpreferences/preferences/local/
