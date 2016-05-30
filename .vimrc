@@ -177,6 +177,7 @@ nnoremap > V>
 
 " Startify
 nnoremap <silent> <leader>S :Startify<cr>
+let g:startify_custom_header=[]
 let g:startify_list_order=['dir', 'files', 'bookmarks', 'sessions']
 let g:startify_change_to_dir=0
 let g:startify_change_to_vcs_root=1
@@ -187,6 +188,9 @@ highlight StartifyNumber ctermfg=215
 highlight StartifyPath ctermfg=245
 highlight StartifySlash ctermfg=240
 highlight StartifySpecial ctermfg=240
+if has('nvim')
+  autocmd! TabNewEntered * Startify
+endif
 
 " fzf
 let g:fzf_layout = { 'down': '~20%' }
