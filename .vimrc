@@ -26,7 +26,7 @@ Plug 'benmills/vimux'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
-Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'on': [], 'for': 'cpp', 'do': './install.py --clang-completer' }
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
 call plug#end()
