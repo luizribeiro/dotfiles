@@ -297,6 +297,10 @@ augroup HackTweaks
   autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
 augroup END
 
+" flow/hack settings
+let g:flow#autoclose=1
+let g:hack#autoclose=1
+
 " Listener/send stuff {{{
 function! Send(cmd, param)
   call system('nc localhost 52698', a:cmd.' '.a:param)
