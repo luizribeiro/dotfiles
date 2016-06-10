@@ -47,7 +47,7 @@ set wildmode=full:longest,full
 set laststatus=2
 set virtualedit=block
 set scrolloff=3
-set switchbuf=useopen,split
+set switchbuf=useopen
 set history=2000
 filetype plugin indent on
 let mapleader=","
@@ -300,6 +300,11 @@ augroup END
 let g:flow#autoclose=1
 let g:hack#autoclose=1
 
+" other Hack stuff
+nmap <leader>T :HackType<cr>
+nmap <leader>F :HackFormat<cr>
+nmap <leader>S :HackSearch<cr>
+
 " Listener/send stuff {{{
 function! Send(cmd, param)
   call system('nc localhost 52698', a:cmd.' '.a:param)
@@ -345,7 +350,7 @@ au VimResized * exe "normal! \<c-w>="
 cmap w!! w !sudo tee % >/dev/null
 
 " add require
-command! -nargs=+ Require call append(line('.'), "var <args> = require('<args>');")
+command! -nargs=+ Require call append(line('.'), "const <args> = require('<args>');")
 nnoremap <leader>rq :Require <c-r>=expand("<cword>")<cr><cr>j=$
 vnoremap <leader>rq y:Require <c-r><c-"><cr>j=$
 CommandCabbr require Require

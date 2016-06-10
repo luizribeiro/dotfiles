@@ -101,7 +101,7 @@ ta() { tmux-vim ta $* }
 # aliases
 LS_BIN=`command -v gls ls | head -1`
 alias ls='$LS_BIN -G -F --color=auto'
-alias grep='grep --color=always'
+alias grep='grep --color=auto'
 alias less='less -R'
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
