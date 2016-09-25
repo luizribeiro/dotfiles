@@ -26,7 +26,6 @@ Plug 'benmills/vimux'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
-Plug 'Valloric/YouCompleteMe', { 'on': [], 'for': 'cpp', 'do': './install.py --clang-completer' }
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
 call plug#end()
@@ -364,12 +363,6 @@ nnoremap <silent> <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
-
-" ycm stuff
-augroup YCMSettings
-  autocmd! User YouCompleteMe call youcompleteme#Enable()
-augroup END
-let g:ycm_confirm_extra_conf = 0
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
