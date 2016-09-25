@@ -175,7 +175,7 @@ nnoremap < V<
 nnoremap > V>
 
 " Startify
-nnoremap <silent> <leader>S :Startify<cr>
+nnoremap <silent> <leader>H :Startify<cr>
 let g:startify_custom_header=[]
 let g:startify_list_order=['dir', 'files', 'bookmarks', 'sessions']
 let g:startify_change_to_dir=0
