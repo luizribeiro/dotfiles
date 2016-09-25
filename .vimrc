@@ -24,6 +24,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
 Plug 'reedes/vim-pencil'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
@@ -374,7 +375,7 @@ CommandCabbr c C
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer']
+let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
@@ -382,6 +383,12 @@ let g:SuperTabLeadingSpaceCompletion = 0
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType ="<c-x><c-o>"
+
+" ultisnips
+let g:UltiSnipsSnippetDirectories=['snips', 'snips.local']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " delimMate
 let g:delimitMate_expand_cr = 1
