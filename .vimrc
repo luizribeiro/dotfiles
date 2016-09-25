@@ -189,7 +189,7 @@ highlight StartifyPath ctermfg=245
 highlight StartifySlash ctermfg=240
 highlight StartifySpecial ctermfg=240
 if has('nvim')
-  autocmd! TabNewEntered * Startify
+  "autocmd! TabNewEntered * Startify
 endif
 
 " fzf
