@@ -254,6 +254,8 @@ CommandCabbr Wq wq
 CommandCabbr WQ wq
 CommandCabbr Vsp vsp
 CommandCabbr VSp vsp
+CommandCabbr hs HS
+CommandCabbr Hs HS
 
 " My replacement for g], which goes into quickfix
 command! -nargs=1 Function call s:Function(<f-args>)
@@ -304,6 +306,7 @@ let g:hack#autoclose=1
 nmap <leader>T :HackType<cr>
 nmap <leader>F :HackFormat<cr>
 nmap <leader>S :HackSearch<cr>
+command! -nargs=? -bang HS call hack#search('<bang>' == '!', <q-args>)
 
 " Listener/send stuff {{{
 function! Send(cmd, param)
