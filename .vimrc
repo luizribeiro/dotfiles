@@ -21,6 +21,7 @@ Plug 'tejr/vim-tmux'
 Plug 'bling/vim-airline'
 Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'steelsojka/deoplete-flow'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
@@ -372,6 +373,8 @@ CommandCabbr c C
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {}
+let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer']
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
