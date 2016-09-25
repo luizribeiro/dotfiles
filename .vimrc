@@ -20,6 +20,7 @@ Plug 'ludovicchabant/vim-lawrencium'
 Plug 'tejr/vim-tmux'
 Plug 'bling/vim-airline'
 Plug 'benmills/vimux'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'reedes/vim-pencil'
@@ -368,6 +369,9 @@ nnoremap <silent> <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
