@@ -25,6 +25,7 @@ Plug 'steelsojka/deoplete-flow'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
+Plug 'pgilad/vim-skeletons'
 Plug 'reedes/vim-pencil'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
@@ -390,6 +391,10 @@ let g:UltiSnipsSnippetDirectories=['snips', 'snips.local']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" ultisnips skeletons
+let skeletons#autoRegister = 1
+let skeletons#skeletonsDir = [glob("~/.vim/skels"), glob("~/.vim/skels.local")]
 
 " delimMate
 let g:delimitMate_expand_cr = 1

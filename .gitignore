@@ -4,4 +4,5 @@
 .vimperator/info/
 .vim/autoload/plug.vim.old
 .vim/snips.local/
+.vim/skels.local/
 osx/alfred/Alfred.alfredpreferences/preferences/local/
