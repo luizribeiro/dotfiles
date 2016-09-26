@@ -119,7 +119,7 @@ set t_Co=256
 colorscheme molokai
 
 " airline setup
-let g:airline_theme='dark'
+let g:airline_theme='custom'
 let g:airline_powerline_fonts=1
 let g:airline_inactive_collapse=0
 let g:airline_section_x=''
