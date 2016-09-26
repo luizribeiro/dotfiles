@@ -376,6 +376,7 @@ CommandCabbr c C
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
+let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
