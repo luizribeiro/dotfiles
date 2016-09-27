@@ -209,6 +209,9 @@ zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
 
+# homebrew settings
+export HOMEBREW_NO_ANALYTICS=1
+
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
