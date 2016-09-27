@@ -83,7 +83,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 let g:indentLine_char='¦'
-let g:indentLine_color_term=235
+let g:indentLine_color_term=236
 
 " signify settings
 let g:signify_vcs_list=['hg', 'git']

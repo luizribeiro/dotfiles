@@ -4,7 +4,7 @@ let g:airline#themes#custom#palette = {}
 
 let s:N1   = [ '#00005f' , '#dfff00' , 17  , 190 ]
 let s:N2   = [ '#ffffff' , '#444444' , 255 , 238 ]
-let s:N3   = [ '#9cffd3' , '#202020' , 85  , 235 ]
+let s:N3   = [ '#9cffd3' , '#202020' , 85  , 234 ]
 let g:airline#themes#custom#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 let g:airline#themes#custom#palette.normal_modified = {
@@ -34,9 +34,9 @@ let g:airline#themes#custom#palette.visual_modified = {
       \ 'airline_c': [ '#ffffff' , '#5f005f' , 255     , 53      , ''     ] ,
       \ }
 
-let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 239 , 235 , '' ]
-let s:IA2 = [ '#4e4e4e' , '#262626' , 239 , 235 , '' ]
-let s:IA3 = [ '#4e4e4e' , '#303030' , 239 , 235 , '' ]
+let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 239 , 234 , '' ]
+let s:IA2 = [ '#4e4e4e' , '#262626' , 239 , 234 , '' ]
+let s:IA3 = [ '#4e4e4e' , '#303030' , 239 , 234 , '' ]
 let g:airline#themes#custom#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 let g:airline#themes#custom#palette.inactive_modified = {
       \ 'airline_c': [ '#875faf' , '' , 97 , '' , '' ] ,
