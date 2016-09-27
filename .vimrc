@@ -125,6 +125,8 @@ let g:airline_powerline_fonts=1
 let g:airline_inactive_collapse=0
 let g:airline_section_x=''
 let g:airline_section_y=''
+let g:airline_section_error=''
+let g:airline_section_warning=''
 set noshowmode
 
 " fake inactive vim-airline setup
