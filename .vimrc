@@ -131,12 +131,16 @@ set noshowmode
 
 " fake inactive vim-airline setup
 let g:__original = g:airline#themes#{g:airline_theme}#palette.normal
+let g:__original_modified = g:airline#themes#{g:airline_theme}#palette.normal_modified
 autocmd FocusLost *
       \ let g:__original = g:airline#themes#{g:airline_theme}#palette.normal
+      \ | let g:__original_modified = g:airline#themes#{g:airline_theme}#palette.normal_modified
       \ | let g:airline#themes#{g:airline_theme}#palette.normal = g:airline#themes#{g:airline_theme}#palette.inactive
+      \ | let g:airline#themes#{g:airline_theme}#palette.normal_modified = g:airline#themes#{g:airline_theme}#palette.inactive_modified
       \ | AirlineRefresh
 autocmd FocusGained *
       \ let g:airline#themes#{g:airline_theme}#palette.normal = g:__original
+      \ | let g:airline#themes#{g:airline_theme}#palette.normal_modified = g:__original_modified
       \ | AirlineRefresh
 
 " lawrencium shows the default branch on the statusline, which is useless
