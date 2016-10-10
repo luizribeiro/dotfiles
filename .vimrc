@@ -17,7 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-lawrencium'
-Plug 'tejr/vim-tmux'
+Plug 'tmux-plugins/vim-tmux'
 Plug 'bling/vim-airline'
 Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
