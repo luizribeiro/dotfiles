@@ -21,7 +21,8 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'bling/vim-airline'
 Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'steelsojka/deoplete-flow'
+Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
+Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -29,6 +30,7 @@ Plug 'pgilad/vim-skeletons'
 Plug 'reedes/vim-pencil'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
+Plug '~/deoplete-hack'
 call plug#end()
 
 " disable for terminal buffers in neovim
@@ -383,6 +385,8 @@ CommandCabbr c C
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
+let g:deoplete#sources['php'] = ['hack', 'buffer', 'ultisnips']
+let g:deoplete#sources['vim'] = ['vim', 'buffer', 'ultisnips']
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 
 " supertab
