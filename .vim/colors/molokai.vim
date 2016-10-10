@@ -89,7 +89,7 @@ hi Typedef         ctermfg=81
 hi Type            ctermfg=81                cterm=none
 hi Underlined      ctermfg=244               cterm=underline
 
-hi VertSplit       ctermfg=244 ctermbg=bg    cterm=none
+hi VertSplit       ctermfg=240 ctermbg=bg    cterm=none
 hi VisualNOS                   ctermbg=238
 hi Visual                      ctermbg=237
 hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
