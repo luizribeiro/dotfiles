@@ -307,6 +307,10 @@ augroup HackTweaks
   autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
 augroup END
 
+augroup PHPSettings
+  autocmd FileType php setlocal iskeyword+=$
+augroup END
+
 " flow/hack settings
 let g:flow#autoclose=1
 let g:hack#autoclose=1
