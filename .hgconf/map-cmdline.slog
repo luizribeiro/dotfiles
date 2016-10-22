@@ -1,4 +1,4 @@
-changeset = '\033[0;33m{rev}\033[0m{branches} {desc|firstline|strip} \033[1;30m({date|age} by {author|person}){bookmarks}\033[0m{tags}\033[0m\n'
+changeset = '\033[0;33m{rev}\033[0m{branches}{bookmarks} {desc|firstline|strip} \033[1;30m({date|age} by {author|person})\033[0m{tags}\033[0m\n'
 
 changeset_quiet = '\033[0;33m{rev}\033[0m {desc|firstline|strip}\n'
 
