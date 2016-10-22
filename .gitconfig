@@ -8,7 +8,7 @@
   grep = auto
 
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%C(yellow)%h%Creset%C(green)%d%Creset %s %C(8)(%cr by %an)%Creset' --abbrev-commit --date=relative
 
 [color "grep"]
   filename = 8
