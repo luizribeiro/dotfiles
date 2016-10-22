@@ -114,6 +114,7 @@ fi
 alias notify='send notify done'
 
 export GREP_COLOR='1;31'
+export GREP_COLORS='fn=38;5;8:ln=38;5;8:bn=38;5;8:se=38;5;8'
 
 export hist_ignore_all_dups
 export HISTSIZE=2000
