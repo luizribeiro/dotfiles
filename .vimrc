@@ -212,7 +212,12 @@ function! FZFWatchman()
     \ 'options': '-m --prompt "watchman> "'
     \ })))
   else
-    GitFiles
+    let root = split(system('git rev-parse --show-toplevel'), '\n')[0]
+    if v:shell_error
+      Files
+    elseif
+      GitFiles
+    endif
   endif
 endfunction
 nnoremap <silent> <leader>f :call FZFWatchman()<cr>
