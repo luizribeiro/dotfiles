@@ -212,10 +212,10 @@ function! FZFWatchman()
     \ 'options': '-m --prompt "watchman> "'
     \ })))
   else
-    let root = split(system('git rev-parse --show-toplevel'), '\n')[0]
+    call system('git rev-parse --show-toplevel')
     if v:shell_error
       Files
-    elseif
+    else
       GitFiles
     endif
   endif
