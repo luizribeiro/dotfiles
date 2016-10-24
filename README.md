@@ -40,10 +40,5 @@ brew install mosh wget htop
 brew cask install iterm2 dropbox
 ```
 
-And, of course, install powerline fonts:
-
-```
-git clone https://github.com/powerline/fonts
-cd fonts
-./install.sh
-```
+And also install
+[LiterationMono patched with `nerd-fonts`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/LiberationMono)
