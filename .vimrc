@@ -22,6 +22,7 @@ Plug 'bling/vim-airline'
 Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
@@ -391,6 +392,7 @@ CommandCabbr c C
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
+let g:deoplete#sources['python'] = ['jedi', 'buffer', 'ultisnips']
 let g:deoplete#sources['vim'] = ['vim', 'buffer', 'ultisnips']
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 
