@@ -107,6 +107,7 @@ alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
+alias git='nocorrect git'
 send() { echo $* | nc localhost 52698 }
 if (( !$+commands[pbcopy] )) ; then
   alias pbcopy='sed 1i"copy" | nc localhost 52698'
