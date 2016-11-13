@@ -24,6 +24,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
+Plug 'rhysd/vim-clang-format'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -98,6 +99,10 @@ nnoremap <silent> <leader>F1 :set foldlevel=1<cr>
 nnoremap <silent> <leader>F2 :set foldlevel=2<cr>
 nnoremap <silent> <leader>F3 :set foldlevel=3<cr>
 nnoremap <silent> <leader>F4 :set foldlevel=4<cr>
+
+" page up and page down as ctrl+u and ctrl+d
+noremap <silent> <PageUp> <c-u>
+noremap <silent> <PageDown> <c-d>
 
 " Keyboard/Mouse settings
 set backspace=indent,eol,start
@@ -324,6 +329,22 @@ augroup PythonSettings
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
   autocmd FileType yaml setlocal shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
+
+" objective c settings
+augroup ObjCSettings
+  autocmd!
+  autocmd FileType objc setlocal shiftwidth=4 softtabstop=4 tabstop=4
+  autocmd FileType objc LengthmattersDisable
+augroup END
+
+" clang format
+let g:clang_format#filetype_style_options = {
+      \   'objc' : {
+      \     'ObjCSpaceAfterProperty' : 'true',
+      \     'DerivePointerAlignment' : 'true',
+      \     'PointerAlignment' : 'Right'
+      \   }
+      \ }
 
 " other Hack stuff
 nmap <leader>T :HackType<cr>
