@@ -18,7 +18,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-lawrencium'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
@@ -126,34 +126,12 @@ nnoremap <silent> <esc> :noh<cr>:echo<cr><esc>
 set t_Co=256
 colorscheme molokai
 
-" airline setup
-let g:airline_theme='custom'
-let g:airline_powerline_fonts=1
-let g:airline_inactive_collapse=0
-let g:airline_section_x=''
-let g:airline_section_y=''
-let g:airline_section_error=''
-let g:airline_section_warning=''
+" lightline setup
+let g:lightline = {
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      \ }
 set noshowmode
-
-" fake inactive vim-airline setup
-let g:__original = copy(g:airline#themes#{g:airline_theme}#palette.normal)
-let g:__original_modified = copy(g:airline#themes#{g:airline_theme}#palette.normal_modified)
-autocmd FocusLost *
-      \ let g:airline#themes#{g:airline_theme}#palette.normal = copy(g:airline#themes#{g:airline_theme}#palette.inactive)
-      \ | let g:airline#themes#{g:airline_theme}#palette.normal_modified = copy(g:airline#themes#{g:airline_theme}#palette.inactive_modified)
-      \ | AirlineRefresh
-autocmd FocusGained *
-      \ let g:airline#themes#{g:airline_theme}#palette.normal = g:__original
-      \ | let g:airline#themes#{g:airline_theme}#palette.normal_modified = g:__original_modified
-      \ | AirlineRefresh
-
-" lawrencium shows the default branch on the statusline, which is useless
-" given my workflow
-let g:airline#extensions#branch#format = 'CustomBranchName'
-function! CustomBranchName(name)
-  return substitute(a:name, 'default - ', '', '')
-endfunction
 
 " I hate the delay when leaving insert mode on terminal
 set ttimeout
