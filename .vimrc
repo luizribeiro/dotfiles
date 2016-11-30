@@ -128,9 +128,37 @@ colorscheme molokai
 
 " lightline setup
 let g:lightline = {
+      \ 'enable': {
+      \   'statusline': 1,
+      \   'tabline': 0
+      \ },
+      \ 'colorscheme': 'custom',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'filetype' ] ]
+      \ },
+      \ 'inactive': {
+      \   'left': [ [ 'dash', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'filetype' ] ]
+      \ },
+      \ 'component_function': {
+      \   'dash': 'LightlineDash'
+      \ },
+      \ 'mode_map': {
+      \   'c': 'NORMAL'
+      \ },
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
+function! LightlineDash()
+  return '------'
+endfunction
 set noshowmode
 
 " I hate the delay when leaving insert mode on terminal
