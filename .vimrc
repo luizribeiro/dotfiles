@@ -149,6 +149,15 @@ let g:lightline = {
       \              [ 'percent' ],
       \              [ 'filetype' ] ]
       \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"\uf023":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"\uf023"}',
+      \   'relativepath': '%<%f'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
       \ 'component_function': {
       \   'dash': 'LightlineDash'
       \ },
