@@ -127,6 +127,7 @@ set t_Co=256
 colorscheme molokai
 
 " lightline setup
+highlight FilenameHighlight ctermfg=250
 let g:lightline = {
       \ 'enable': {
       \   'statusline': 1,
@@ -136,7 +137,7 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'modified' ],
-      \             [ 'relativepath' ] ],
+      \             [ 'relativepath_highlight' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'filetype' ] ]
@@ -152,7 +153,8 @@ let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?"\uf023":""}',
       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"\uf023"}',
-      \   'relativepath': '%<%f'
+      \   'relativepath_highlight': '%<%{expand("%:h")}/%#FilenameHighlight#%{expand("%:t")}',
+      \   'relativepath': '%<%{expand("%:h")}/%{expand("%:t")}'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
