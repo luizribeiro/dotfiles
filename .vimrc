@@ -464,6 +464,32 @@ let skeletons#skeletonsDir = [glob("~/.vim/skels"), glob("~/.vim/skels.local")]
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 
+" toggle between .h and .m
+nnoremap <silent> _ :call ToggleHeader()<cr>
+function! ToggleHeader()
+  let l:extension = expand('%:e')
+  let l:file_without_extension = expand('%:r')
+  let l:file_candidates = []
+
+  if l:extension == 'h'
+    call add(l:file_candidates, l:file_without_extension . '.m')
+    call add(l:file_candidates, l:file_without_extension . '.mm')
+    call add(l:file_candidates, l:file_without_extension . '.c')
+    call add(l:file_candidates, l:file_without_extension . '.cpp')
+  elseif l:extension != ''
+    call add(l:file_candidates, l:file_without_extension . '.h')
+  endif
+
+  for l:candidate in l:file_candidates
+    if file_readable(l:candidate)
+      execute 'edit' l:candidate
+      return
+    endif
+  endfor
+
+  echom "Header file not found"
+endfunction
+
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
