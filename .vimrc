@@ -24,6 +24,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
+Plug 'Rip-Rip/clang_complete', { 'for': 'objc', 'do': 'make' }
 Plug 'rhysd/vim-clang-format'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
@@ -439,9 +440,16 @@ CommandCabbr c C
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
+let g:deoplete#sources['objc'] = ['clang_complete', 'buffer', 'ultisnips']
 let g:deoplete#sources['python'] = ['jedi', 'buffer', 'ultisnips']
 let g:deoplete#sources['vim'] = ['vim', 'buffer', 'ultisnips']
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
+
+" clang_complete
+let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+let g:clang_complete_macros = 1
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'ultisnips'
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
