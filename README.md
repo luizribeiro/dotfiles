@@ -37,7 +37,7 @@ While you're at it, install these too:
 
 ```
 brew install mosh wget htop
-brew cask install iterm2 dropbox
+brew cask install alfred iterm2 dropbox
 ```
 
 And also install
