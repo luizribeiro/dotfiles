@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>2D409F29-EBD5-446D-9FDB-1C4EA400DFC8</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>7E751044-94F2-4355-BFE9-B37B6DC0002D</key>
@@ -37,6 +41,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>9B6F4AB5-C3A5-4F39-B4CE-8537696FDBC0</key>
@@ -48,17 +54,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-			</dict>
-		</array>
-		<key>9F83345F-89C5-46C3-80B1-A305EFA7C6B3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C0E4A7F0-55B8-4CC7-9EA9-F03BDA1958E5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>B3A8B478-C6EC-46F1-8FB7-06EEA1A6A18B</key>
@@ -70,6 +67,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>D62834A9-6F5F-427F-9CF2-0E341E0B3B1B</key>
@@ -81,6 +80,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>F575F413-18C6-4F6E-AA0D-AB100C2CE970</key>
@@ -92,6 +93,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -112,6 +115,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>1</integer>
 				<key>hotmod</key>
@@ -130,7 +137,7 @@
 			<key>uid</key>
 			<string>7E751044-94F2-4355-BFE9-B37B6DC0002D</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -147,7 +154,7 @@
 			<key>uid</key>
 			<string>F741C110-500F-4BAD-8D64-77478FD05064</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -164,7 +171,7 @@
 			<key>uid</key>
 			<string>FE75A33A-D7BA-4DD0-84BF-E488D128CE1B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -173,6 +180,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
@@ -191,7 +202,7 @@
 			<key>uid</key>
 			<string>F575F413-18C6-4F6E-AA0D-AB100C2CE970</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -200,6 +211,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>8</integer>
 				<key>hotmod</key>
@@ -218,7 +233,7 @@
 			<key>uid</key>
 			<string>B3A8B478-C6EC-46F1-8FB7-06EEA1A6A18B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -235,7 +250,7 @@
 			<key>uid</key>
 			<string>9A8B2F0D-AE77-4E69-A15A-FB7757250F65</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -244,6 +259,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>36</integer>
 				<key>hotmod</key>
@@ -262,14 +281,14 @@
 			<key>uid</key>
 			<string>9B6F4AB5-C3A5-4F39-B4CE-8537696FDBC0</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>~/Applications/iTerm.app</string>
+					<string>/Applications/iTerm.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
@@ -279,7 +298,7 @@
 			<key>uid</key>
 			<string>0C1346CE-7A4E-45D6-A284-9E72BE644CAB</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -288,6 +307,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>36</integer>
 				<key>hotmod</key>
@@ -306,7 +329,7 @@
 			<key>uid</key>
 			<string>0EE92F5E-397C-4741-A00C-8B4A6427E21D</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -323,7 +346,7 @@
 			<key>uid</key>
 			<string>F8A0EFB7-9FE5-45CC-A416-E034C6471503</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -332,6 +355,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>40</integer>
 				<key>hotmod</key>
@@ -350,7 +377,7 @@
 			<key>uid</key>
 			<string>D62834A9-6F5F-427F-9CF2-0E341E0B3B1B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -359,6 +386,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>34</integer>
 				<key>hotmod</key>
@@ -377,14 +408,14 @@
 			<key>uid</key>
 			<string>2D409F29-EBD5-446D-9FDB-1C4EA400DFC8</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
+					<string>/Applications/Xcode_8.3_fb.app/Contents/Developer/Applications/Simulator.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
@@ -393,50 +424,6 @@
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
 			<string>3B87FC91-2B08-4BFB-BD1F-E08D6F7B9C4A</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Xcode.app</string>
-				</array>
-				<key>toggle</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
-			<key>uid</key>
-			<string>C0E4A7F0-55B8-4CC7-9EA9-F03BDA1958E5</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>7</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>X</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>9F83345F-89C5-46C3-80B1-A305EFA7C6B3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -447,76 +434,92 @@
 	<dict>
 		<key>0C1346CE-7A4E-45D6-A284-9E72BE644CAB</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>430</real>
 		</dict>
 		<key>0EE92F5E-397C-4741-A00C-8B4A6427E21D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
 		<key>2D409F29-EBD5-446D-9FDB-1C4EA400DFC8</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>730</real>
 		</dict>
 		<key>3B87FC91-2B08-4BFB-BD1F-E08D6F7B9C4A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>730</real>
 		</dict>
 		<key>7E751044-94F2-4355-BFE9-B37B6DC0002D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>9A8B2F0D-AE77-4E69-A15A-FB7757250F65</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>9B6F4AB5-C3A5-4F39-B4CE-8537696FDBC0</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
-		<key>9F83345F-89C5-46C3-80B1-A305EFA7C6B3</key>
-		<dict>
-			<key>ypos</key>
-			<real>850</real>
-		</dict>
 		<key>B3A8B478-C6EC-46F1-8FB7-06EEA1A6A18B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
-		<key>C0E4A7F0-55B8-4CC7-9EA9-F03BDA1958E5</key>
-		<dict>
-			<key>ypos</key>
-			<real>850</real>
-		</dict>
 		<key>D62834A9-6F5F-427F-9CF2-0E341E0B3B1B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>610</real>
 		</dict>
 		<key>F575F413-18C6-4F6E-AA0D-AB100C2CE970</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>F741C110-500F-4BAD-8D64-77478FD05064</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>F8A0EFB7-9FE5-45CC-A416-E034C6471503</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>610</real>
 		</dict>
 		<key>FE75A33A-D7BA-4DD0-84BF-E488D128CE1B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>

@@ -411,9 +411,9 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~/.dotfiles/osx/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -422,42 +422,37 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>307</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
+	<key>NSTableView Columns v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
+	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
+	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
+	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
+	DIAIgAlRMSNAdCGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
+	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
+	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	AAAAADoAAAAAAAAAAAAAAAAAAAFM
+	</data>
+	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
+	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
+	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	</data>
+	<key>NSTableView Supports v2 KeyBingingTable</key>
+	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1194 427 445 94 0 0 2560 1417 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>169 380 606 456 0 0 1680 1050 </string>
+	<string>1168 37 445 77 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 494 620 392 0 0 1680 1050 </string>
+	<string>530 477 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1518 970 1018 447 0 0 2560 1417 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>127 443 592 584 0 0 1680 1027 </string>
+	<string>204 229 918 495 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>456 641 802 517 0 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>339 193 865 522 0 0 2560 1417 </string>
+	<string>0 445 850 582 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -735,7 +730,7 @@
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
-			<real>1</real>
+			<real>0.89619022966867468</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -1052,11 +1047,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>LiterationMonoPowerlineNerdFontCompleteMono--- 12</string>
+			<string>LiterationMonoPowerlineNerdFontC- 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>LiterationMonoPowerlineNerdFontCompleteMono--- 12</string>
+			<string>LiterationMonoPowerlineNerdFontC- 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1228,7 +1223,7 @@
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>0.92966985128012047</real>
+			<real>1.0137483527861444</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -1237,26 +1232,16 @@
 			<string>/Users/luizribeiro</string>
 		</dict>
 	</array>
-	<key>NoSyncConfirmBeta</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>AF6A45E9-FF59-4AF2-BDBC-B5A3CD64EBB5</string>
+	<string>1BFF3CA5-230B-4081-8CB7-131D40B7CE0E</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>486919370.58724701</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>481581084.44923198</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486705326.53529102</real>
+	<real>513565874.967237</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1312,18 +1297,18 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
-	<key>SUAutomaticallyUpdate</key>
-	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=2</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=99</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-13T15:25:15Z</date>
+	<date>2017-04-11T01:22:15Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Selection Respects Soft Boundaries</key>
@@ -1348,8 +1333,6 @@
 	<integer>10</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1477515776</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -1373,12 +1356,10 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
-	<key>moveToApplicationsFolderAlertSuppress</key>
-	<true/>
 </dict>
 </plist>
