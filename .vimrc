@@ -23,6 +23,7 @@ Plug 'benmills/vimux'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'hdima/python-syntax', { 'for': 'python' }
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'Rip-Rip/clang_complete', { 'for': 'objc', 'do': 'make' }
 Plug 'rhysd/vim-clang-format'
