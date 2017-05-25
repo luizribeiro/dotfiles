@@ -20,25 +20,14 @@ Optionally, you can create the following files to customize things locally:
 
 ### OS X
 
-If you're using OS X, you'll need to install the GNU Core Utilities and a few
-dependencies first:
+Just a bunch of stuff that you should install and setup:
 
 ```
-brew install coreutils tmux zsh fzf
+$ brew install coreutils tmux zsh fzf
+$ chsh -s /bin/zsh
+$ brew install neovim/neovim/neovim
+$ brew install mosh wget htop
+$ brew cask install alfred iterm2 dropbox slack spotify
 ```
-
-[neovim](http://neovim.org/) can be installed with:
-
-```
-brew install neovim/neovim/neovim
-```
-
-While you're at it, install these too:
-
-```
-brew install mosh wget htop
-brew cask install alfred iterm2 dropbox
-```
-
 And also install
 [LiterationMono patched with `nerd-fonts`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/LiberationMono)
