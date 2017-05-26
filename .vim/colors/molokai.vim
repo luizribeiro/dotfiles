@@ -71,7 +71,11 @@ hi Repeat          ctermfg=161               cterm=bold
 hi Search          ctermfg=253 ctermbg=60
 
 " marks column
-hi SignColumn      ctermfg=118 ctermbg=234
+hi SignColumn      ctermfg=250 ctermbg=235
+hi SignError       ctermfg=1 ctermbg=235
+hi SignWarning     ctermfg=3 ctermbg=235
+hi SignInformation ctermfg=4 ctermbg=235
+hi SignHint        ctermfg=250 ctermbg=235
 hi SpecialChar     ctermfg=161               cterm=bold
 hi SpecialComment  ctermfg=245               cterm=bold
 hi Special         ctermfg=81  ctermbg=232
