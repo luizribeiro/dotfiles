@@ -20,9 +20,9 @@ Plug 'ludovicchabant/vim-lawrencium'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'hdima/python-syntax', { 'for': 'python' }
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'Rip-Rip/clang_complete', { 'for': 'objc', 'do': 'make' }
@@ -263,7 +263,6 @@ vnoremap ; :
 " Split windows separator
 set fillchars=fold:-,vert:│
 
-noremap gd <C-]>zz
 noremap gq :botright copen<CR>
 
 " Create directory if necessary on save
@@ -444,12 +443,47 @@ nnoremap <silent> <leader>h :sp<cr>
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
 
+" language server protocol
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript': ['/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'python': ['pyls']
+    \ }
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_signColumnAlwaysOn = 0
+let g:LanguageClient_diagnosticsDisplay = {
+  \     1: {
+  \         "name": "Error",
+  \         "texthl": "SyntasticError",
+  \         "signText": "\uf057",
+  \         "signTexthl": "SignError"
+  \     },
+  \     2: {
+  \         "name": "Warning",
+  \         "texthl": "SyntasticWarning",
+  \         "signText": "\uf071",
+  \         "signTexthl": "SignWarning"
+  \     },
+  \     3: {
+  \         "name": "Information",
+  \         "texthl": "LanguageClientInformation",
+  \         "signText": "\uf05a",
+  \         "signTexthl": "SignInformation"
+  \     },
+  \     4: {
+  \         "name": "Hint",
+  \         "texthl": "LanguageClientHint",
+  \         "signText": "\uf400",
+  \         "signTexthl": "SignHint"
+  \     }
+  \ }
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
 let g:deoplete#sources['objc'] = ['clang_complete', 'buffer', 'ultisnips']
-let g:deoplete#sources['python'] = ['jedi', 'buffer', 'ultisnips']
 let g:deoplete#sources['vim'] = ['vim', 'buffer', 'ultisnips']
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 

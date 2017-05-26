@@ -31,3 +31,10 @@ $ brew cask install alfred iterm2 dropbox slack spotify
 ```
 And also install
 [LiterationMono patched with `nerd-fonts`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/LiberationMono)
+
+### Language Server Protocol
+
+```
+$ git clone https://github.com/palantir/python-language-server
+$ cd python-language-server && pip install .
+```
