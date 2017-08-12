@@ -24,6 +24,7 @@ Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'hdima/python-syntax', { 'for': 'python' }
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'Rip-Rip/clang_complete', { 'for': 'objc', 'do': 'make' }
 Plug 'rhysd/vim-clang-format'
