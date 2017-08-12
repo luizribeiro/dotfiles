@@ -32,6 +32,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4EF5FABB-9C33-419E-8A67-4529B7874FCC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CEA5CDB6-D835-4FF1-BD1A-32AD1D9F81A7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7E751044-94F2-4355-BFE9-B37B6DC0002D</key>
 		<array>
 			<dict>
@@ -427,6 +440,54 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/LimeChat.app</string>
+				</array>
+				<key>toggle</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>CEA5CDB6-D835-4FF1-BD1A-32AD1D9F81A7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>37</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>L</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>4EF5FABB-9C33-419E-8A67-4529B7874FCC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -460,6 +521,13 @@
 			<key>ypos</key>
 			<real>730</real>
 		</dict>
+		<key>4EF5FABB-9C33-419E-8A67-4529B7874FCC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>850</integer>
+		</dict>
 		<key>7E751044-94F2-4355-BFE9-B37B6DC0002D</key>
 		<dict>
 			<key>xpos</key>
@@ -487,6 +555,13 @@
 			<integer>100</integer>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>CEA5CDB6-D835-4FF1-BD1A-32AD1D9F81A7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>850</integer>
 		</dict>
 		<key>D62834A9-6F5F-427F-9CF2-0E341E0B3B1B</key>
 		<dict>
