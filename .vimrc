@@ -544,3 +544,5 @@ endfunction
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+nnoremap <silent> <leader>! :call VimuxRunCommand('!!')<cr>
