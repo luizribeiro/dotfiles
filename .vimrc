@@ -351,6 +351,7 @@ let g:hack#autoclose=1
 augroup PythonSettings
   autocmd!
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
+  autocmd FileType python setlocal textwidth=120
   autocmd FileType yaml setlocal shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
 
