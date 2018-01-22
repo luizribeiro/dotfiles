@@ -20,7 +20,10 @@ Plug 'ludovicchabant/vim-lawrencium'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'hdima/python-syntax', { 'for': 'python' }
