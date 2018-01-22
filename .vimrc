@@ -237,8 +237,8 @@ nnoremap <silent> <leader>m :History<cr>
 " fzf watchman
 function! FZFWatchman()
   if file_readable('.watchmanconfig')
-    let opts = copy(get(g:, 'fzf_layout', g:fzf#vim#default_layout))
-    call fzf#run(extend(opts, fzf#vim#wrap({
+    let opts = copy(get(g:, 'fzf_layout', { 'down': '~20%' }))
+    call fzf#run(extend(opts, fzf#wrap({
     \ 'source': 'watchman-files',
     \ 'options': '-m --prompt "watchman> "'
     \ })))
