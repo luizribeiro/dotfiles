@@ -27,7 +27,7 @@
     },
     "search" : {
       "paddingVertical" : 4,
-      "background" : "#0000001A",
+      "background" : "#00000019",
       "spacing" : 8,
       "text" : {
         "size" : 34,
@@ -38,7 +38,7 @@
       "backgroundSelected" : "#B2D7FFFF"
     },
     "window" : {
-      "color" : "#FFFFFFE5",
+      "color" : "#FFFFFFFF",
       "paddingHorizontal" : 9,
       "width" : 559,
       "borderPadding" : 0,

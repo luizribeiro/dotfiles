@@ -428,7 +428,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/Xcode_8.3_fb.app/Contents/Developer/Applications/Simulator.app</string>
+					<string>/Applications/Xcode_8.3.2_fb.app/Contents/Developer/Applications/Simulator.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
