@@ -35,7 +35,6 @@ Plug 'pgilad/vim-skeletons'
 Plug 'reedes/vim-pencil'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
-Plug 'critiqjo/lldb.nvim'
 call plug#end()
 
 " disable for terminal buffers in neovim
@@ -358,12 +357,6 @@ augroup ObjCSettings
   autocmd FileType objc setlocal shiftwidth=4 softtabstop=4 tabstop=4
   autocmd FileType objc LengthmattersDisable
 augroup END
-
-" lldb.nvim settings
-augroup LLDBSettings
-  autocmd FileType lldb LengthmattersDisable
-augroup END
-nnoremap <leader>B <Plug>LLBreakSwitch
 
 " clang format
 let g:clang_format#filetype_style_options = {
