@@ -443,7 +443,7 @@ CommandCabbr c C
 
 " language server protocol
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'php': ['hh', 'lsp'],
     \ 'javascript': ['/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
     \ 'python': ['pyls']
     \ }
@@ -479,6 +479,7 @@ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_refresh_always = 1
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
 let g:deoplete#sources['objc'] = ['clang_complete', 'buffer', 'ultisnips']
