@@ -76,7 +76,7 @@ if !has('nvim')
 endif
 
 " vim-pencil settings
-let g:pencil#autoformat = 1
+let g:pencil#autoformat = 0
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
