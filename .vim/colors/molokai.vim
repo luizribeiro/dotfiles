@@ -107,6 +107,6 @@ hi NonText         ctermfg=59
 hi SpecialKey      ctermfg=59
 
 " tab bar
-hi TabLineFill ctermfg=235 ctermbg=235
+hi TabLineFill ctermfg=235 ctermbg=235 cterm=none
 hi TabLine ctermfg=245 ctermbg=235 cterm=none
 hi TabLineSel ctermfg=255 ctermbg=234 cterm=bold
