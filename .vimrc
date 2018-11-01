@@ -24,13 +24,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'steelsojka/deoplete-flow', { 'for': 'javascript' }
 Plug 'hdima/python-syntax', { 'for': 'python' }
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-Plug 'Shougo/neco-vim', { 'for': 'vim' }
-Plug 'Rip-Rip/clang_complete', { 'for': 'objc', 'do': 'make' }
-Plug 'rhysd/vim-clang-format'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -362,15 +357,6 @@ augroup ObjCSettings
   autocmd FileType objc LengthmattersDisable
 augroup END
 
-" clang format
-let g:clang_format#filetype_style_options = {
-      \   'objc' : {
-      \     'ObjCSpaceAfterProperty' : 'true',
-      \     'DerivePointerAlignment' : 'true',
-      \     'PointerAlignment' : 'Right'
-      \   }
-      \ }
-
 " other Hack stuff
 nmap <leader>T :HackType<cr>
 nmap <leader>F :HackFormat<cr>
@@ -476,21 +462,6 @@ let g:LanguageClient_diagnosticsDisplay = {
   \     }
   \ }
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#sources = {}
-let g:deoplete#sources['javascript.jsx'] = ['flow', 'buffer', 'ultisnips']
-let g:deoplete#sources['objc'] = ['clang_complete', 'buffer', 'ultisnips']
-let g:deoplete#sources['vim'] = ['vim', 'buffer', 'ultisnips']
-let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
-
-" clang_complete
-let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-let g:clang_complete_macros = 1
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
