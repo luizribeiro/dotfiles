@@ -33,6 +33,7 @@ Plug 'pgilad/vim-skeletons'
 Plug 'reedes/vim-pencil'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
+Plug 'w0rp/ale'
 call plug#end()
 
 " disable for terminal buffers in neovim
@@ -115,6 +116,20 @@ set synmaxcol=200
 
 " Code completion settings
 set completeopt=longest,menuone
+
+" vim-ale settings
+let g:ale_completion_enabled = 1
+let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
+let g:ale_linters = {
+\   'hack': ['hack', 'hhast'],
+\   'python': ['pyre'],
+\}
+let g:ale_fixers = {
+\   'hack': ['hackfmt'],
+\   'python': ['black'],
+\}
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
 
 " Search settings
 set hlsearch
@@ -324,14 +339,11 @@ augroup QuickfixSettings
 augroup END
 
 " Hack omni-completion
-let g:hack#omnifunc=1
 augroup HackTweaks
   " Better Hack syntax highlighting (I should add this to after/ eventually)
   autocmd FileType php syn region phpRegion matchgroup=Delimiter start="<?hh"
       \ end="?>" contains=@phpClTop
   autocmd FileType php syn keyword phpStructure use trait
-
-  autocmd BufNewFile,BufRead *.php setl omnifunc=hackcomplete#Complete
 augroup END
 
 augroup PHPSettings
@@ -426,42 +438,6 @@ nnoremap <silent> <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
-
-" language server protocol
-let g:LanguageClient_serverCommands = {
-    \ 'php': ['hh', 'lsp'],
-    \ 'javascript': ['/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
-    \ 'python': ['pyls']
-    \ }
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_signColumnAlwaysOn = 0
-let g:LanguageClient_diagnosticsDisplay = {
-  \     1: {
-  \         "name": "Error",
-  \         "texthl": "SyntasticError",
-  \         "signText": "\uf057",
-  \         "signTexthl": "SignError"
-  \     },
-  \     2: {
-  \         "name": "Warning",
-  \         "texthl": "SyntasticWarning",
-  \         "signText": "\uf071",
-  \         "signTexthl": "SignWarning"
-  \     },
-  \     3: {
-  \         "name": "Information",
-  \         "texthl": "LanguageClientInformation",
-  \         "signText": "\uf05a",
-  \         "signTexthl": "SignInformation"
-  \     },
-  \     4: {
-  \         "name": "Hint",
-  \         "texthl": "LanguageClientHint",
-  \         "signText": "\uf400",
-  \         "signTexthl": "SignHint"
-  \     }
-  \ }
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 
 " supertab
 let g:SuperTabLongestEnhanced = 1
