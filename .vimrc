@@ -18,6 +18,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-lawrencium'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'jparise/vim-graphql'
 Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
 Plug 'autozimu/LanguageClient-neovim', {
