@@ -21,10 +21,6 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'jparise/vim-graphql'
 Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'hdima/python-syntax', { 'for': 'python' }
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'ervandew/supertab'
