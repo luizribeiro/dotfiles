@@ -1,37 +1,55 @@
 call plug#begin('~/.vim/bundle')
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'tpope/vim-vinegar'
-Plug 'jlfwong/vim-arcanist', { 'on': 'ArcInlines' }
-Plug 'tpope/vim-eunuch'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'hhvm/vim-hack', { 'for': 'php' }
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
-Plug 'luizribeiro/bclose.vim'
-Plug 'regedarek/ZoomWin'
-Plug 'Lokaltog/vim-easymotion'
-Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+" UI quality of life
 Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-fugitive'
-Plug 'ludovicchabant/vim-lawrencium'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'jparise/vim-graphql'
 Plug 'itchyny/lightline.vim'
-Plug 'benmills/vimux'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'hdima/python-syntax', { 'for': 'python' }
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-Plug 'ervandew/supertab'
-Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
-Plug 'pgilad/vim-skeletons'
-Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-vinegar'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
+Plug 'Raimondi/delimitMate'
+
+" Integration with tmux
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'benmills/vimux'
+
+" Integration with other tools
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'ludovicchabant/vim-lawrencium'
+Plug 'jlfwong/vim-arcanist', { 'on': 'ArcInlines' }
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Mappings
+Plug 'Lokaltog/vim-easymotion'
+Plug 'luizribeiro/bclose.vim'
+Plug 'regedarek/ZoomWin'
+
+" Auto-complete
 Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'pgilad/vim-skeletons'
+
+" JavaScript
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
+
+" Hack / PHP
+Plug 'hhvm/vim-hack', { 'for': 'php' }
+
+" Python
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'hdima/python-syntax', { 'for': 'python' }
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
+" Other filetypes
+Plug 'jparise/vim-graphql', { 'for': 'graphql' }
+Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
+Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+
 call plug#end()
 
 " disable for terminal buffers in neovim
