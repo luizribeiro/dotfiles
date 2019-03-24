@@ -6,9 +6,6 @@ editor = nvim
 [extensions]
 progress =
 
-[defaults]
-log = -f
-
 [alias]
 show = export
 lg = log --style=$HOME/.hgconf/map-cmdline.slog
