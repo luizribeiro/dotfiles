@@ -35,7 +35,6 @@ Plug 'pgilad/vim-skeletons'
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
 
 " Hack / PHP
 Plug 'hhvm/vim-hack', { 'for': 'php' }
