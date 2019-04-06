@@ -18,6 +18,7 @@ DOTFILES=(
   .htoprc
   .nvim
   .nvimrc
+  .ssh/config
   .tmux.conf
   .vim
   .vimperator
@@ -33,6 +34,7 @@ git submodule init
 git submodule update
 
 mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.ssh"
 
 echo "Linking config files to $HOME..."
 for dotfile in "${DOTFILES[@]}"
