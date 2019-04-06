@@ -7,4 +7,5 @@
 .vim/skels.local/
 osx/alfred/Alfred.alfredpreferences/preferences/local/
 .bin/fzf
-.ssh/id*
+.ssh/*
+!.ssh/config
