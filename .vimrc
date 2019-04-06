@@ -134,6 +134,7 @@ set completeopt=longest,menuone
 
 " vim-ale settings
 let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_linters = {
 \   'hack': ['hack', 'hhast'],
@@ -143,7 +144,9 @@ let g:ale_fixers = {
 \   'hack': ['hackfmt'],
 \   'python': ['black'],
 \   'javascript': ['prettier'],
+\   'graphql': ['prettier'],
 \}
+autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 
