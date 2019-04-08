@@ -268,6 +268,7 @@ function! FZFWatchman()
   if file_readable('.watchmanconfig')
     let opts = copy(get(g:, 'fzf_layout', { 'down': '~20%' }))
     call fzf#run(extend(opts, fzf#wrap({
+    \ 'name': 'files',
     \ 'source': 'watchman-files',
     \ 'options': '-m --prompt "watchman> "'
     \ })))
