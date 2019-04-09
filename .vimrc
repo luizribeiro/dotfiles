@@ -146,6 +146,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'graphql': ['prettier'],
 \}
+autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
