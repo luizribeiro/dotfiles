@@ -6,6 +6,8 @@ DOTFILES_PATH=`pwd`
 popd > /dev/null
 
 DOTFILES=(
+  .Xdefaults
+  .Xresources
   .bin
   .config/nvim
   .dircolors
