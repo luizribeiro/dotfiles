@@ -26,6 +26,7 @@ DOTFILES=(
   .vimperator
   .vimperatorrc
   .vimrc
+  .xinitrc
   .zshrc
 )
 
