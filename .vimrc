@@ -48,6 +48,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'jparise/vim-graphql', { 'for': 'graphql' }
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
 
 call plug#end()
 
@@ -139,7 +140,9 @@ let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_linters = {
 \   'hack': ['hack', 'hhast'],
 \   'python': ['pyre'],
+\   'cs': ['OmniSharp'],
 \}
+let g:OmniSharp_server_use_mono = 0
 let g:ale_fixers = {
 \   'hack': ['hackfmt'],
 \   'python': ['black'],
@@ -381,6 +384,11 @@ augroup PythonSettings
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
   autocmd FileType python setlocal textwidth=120
   autocmd FileType yaml setlocal shiftwidth=4 softtabstop=4 tabstop=4
+augroup END
+
+augroup CSharpSettings
+  autocmd!
+  autocmd FileType cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
 augroup END
 
 " objective c settings
