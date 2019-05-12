@@ -301,7 +301,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/Alacritty.app</string>
+					<string>/Applications/iTerm.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
