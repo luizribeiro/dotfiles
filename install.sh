@@ -8,6 +8,7 @@ popd > /dev/null
 DOTFILES=(
   .Xdefaults
   .Xresources
+  .alacritty.yml
   .bin
   .config/nvim
   .dircolors
