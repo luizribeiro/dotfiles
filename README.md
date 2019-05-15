@@ -23,7 +23,7 @@ Optionally, you can create the following files to customize things locally:
 Just a bunch of stuff that you should install and setup:
 
 ```
-$ brew install coreutils tmux zsh fzf
+$ brew install coreutils tmux zsh fzf rg
 $ chsh -s /bin/zsh
 $ brew install neovim/neovim/neovim
 $ brew install mosh wget htop
@@ -31,8 +31,6 @@ $ brew cask install alfred iterm2 dropbox slack spotify
 $ brew tap caskroom/fonts
 $ brew cask install font-hack-nerd-font
 ```
-And also install
-[LiterationMono patched with `nerd-fonts`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/LiberationMono)
 
 ### Language Server Protocol
 
