@@ -1,2 +1,2 @@
 set guioptions-=rL
-set guifont=Liberation\ Mono\ for\ Powerline:h12
+set guifont=Hack\ Nerd\ Font:h12
