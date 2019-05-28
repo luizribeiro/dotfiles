@@ -1,13 +1,10 @@
 #!/bin/bash
  
-for fgbg in 38 48 ; do
-  for color in {0..256} ; do
-    echo -en "\e[${fgbg};5;${color}m ${color}\t\e[0m"
-    if [ $((($color + 1) % 10)) == 0 ] ; then
-      echo
-    fi
-  done
-  echo
+for i in {0..255} ; do
+  printf "\x1b[38;5;${i}m%3d " "${i}"
+  if (( $i == 15 )) || (( $i > 15 )) && (( ($i-15) % 12 == 0 )); then
+    echo;
+  fi
 done
  
 exit 0
