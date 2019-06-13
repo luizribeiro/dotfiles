@@ -20,21 +20,15 @@ Optionally, you can create the following files to customize things locally:
 
 ### OS X
 
-Just a bunch of stuff that you should install and setup:
+Just a bunch of stuff that I generally install:
 
 ```
-$ brew install coreutils tmux zsh fzf rg
+$ brew install coreutils tmux zsh fzf ripgrep jq
 $ chsh -s /bin/zsh
 $ brew install neovim/neovim/neovim
 $ brew install mosh wget htop
-$ brew cask install alfred iterm2 dropbox slack spotify
+$ brew cask install alfred google-chrome iterm2 dropbox istat-menus spotify
+$ brew cask install mailspring steam slack whatsapp
 $ brew tap caskroom/fonts
 $ brew cask install font-hack-nerd-font
-```
-
-### Language Server Protocol
-
-```
-$ git clone https://github.com/palantir/python-language-server
-$ cd python-language-server && pip install .
 ```
