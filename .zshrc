@@ -49,7 +49,7 @@ compinit -i
 DIRCOLORS=`command -v gdircolors dircolors | head -1`
 eval $($DIRCOLORS -b $HOME/.dircolors)
 
-zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
