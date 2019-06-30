@@ -27,6 +27,7 @@ $ brew install coreutils tmux zsh fzf ripgrep jq
 $ chsh -s /bin/zsh
 $ brew install neovim/neovim/neovim
 $ brew install mosh wget htop
+$ brew install lastpass-cli
 $ brew cask install alfred google-chrome iterm2 dropbox istat-menus spotify
 $ brew cask install mailspring steam slack whatsapp
 $ brew tap caskroom/fonts
