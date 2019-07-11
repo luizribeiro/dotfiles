@@ -124,8 +124,6 @@ export PATH="$HOME/.bin:$PATH"
 
 setopt correctall
 
-alias back='cd "$OLDPWD"'
-
 if [ "$SSH_AUTH_SOCK" != "/tmp/ssh-agent-$USER-screen" ]; then
   ln -sf $SSH_AUTH_SOCK /tmp/ssh-agent-$USER-screen
   export SSH_AUTH_SOCK="/tmp/ssh-agent-$USER-screen"
@@ -183,10 +181,6 @@ function _get_tags {
   echo $(echo $(awk -v ORS=" "  "/^${cur}/ { print \$1 }" tags))
 }
 compctl -x 'C[-1,-t]' -K _get_tags -- vim
-
-# misc aliases
-alias stripc='sed -r "s/\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
-alias lasturl='tmux capture-pane \; show-buffer -b0 \; delete-buffer -b0 | grep -P -o "(?:https?://|ftp://|news://|mailto:|file://|\bwww\.)[a-zA-Z0-9\-\@;\/?:&=%\$_.+!*\x27,~#]*(\([a-zA-Z0-9\-\@;\/?:&=%\$_.+!*\x27,~#]*\)|[a-zA-Z0-9\-\@;\/?:&=%\$_+*~])+" | tail -1 | stripc'
 
 # change cursor shape depending on insert mode
 function zle-keymap-select zle-line-init
