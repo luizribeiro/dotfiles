@@ -135,25 +135,6 @@ set synmaxcol=200
 " Code completion settings
 set completeopt=longest,menuone
 
-" vim-ale settings
-let g:ale_completion_enabled = 1
-let g:ale_fix_on_save = 1
-let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
-let g:ale_linters = {
-\   'hack': ['hack', 'hhast'],
-\   'python': ['pyre'],
-\}
-let g:ale_fixers = {
-\   'hack': ['hackfmt'],
-\   'python': ['black'],
-\   'javascript': ['prettier'],
-\   'graphql': ['prettier'],
-\}
-autocmd FileType hack let b:ale_fix_on_save = 0
-autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
-nnoremap <silent> K :ALEHover<CR>
-nnoremap <silent> gd :ALEGoToDefinition<CR>
-
 " Search settings
 set hlsearch
 set incsearch
@@ -164,6 +145,31 @@ nnoremap <silent> <esc> :noh<cr>:echo<cr><esc>
 " Colors setup
 set t_Co=256
 colorscheme molokai
+
+" vim-ale settings
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
+let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_linters = {
+\   'hack': ['hack', 'hhast'],
+\   'python': ['pyre'],
+\}
+let g:ale_fixers = {
+\   'hack': ['hackfmt'],
+\   'python': ['black'],
+\   'javascript': ['prettier'],
+\   'graphql': ['prettier'],
+\}
+let g:ale_sign_error = "\uf467"
+let g:ale_sign_warning = "\uf46e"
+highlight ALEErrorSign ctermfg=196
+highlight ALEWarningSign ctermfg=226
+autocmd FileType hack let b:ale_fix_on_save = 0
+autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
 
 " lightline setup
 highlight FilenameHighlight ctermfg=250
