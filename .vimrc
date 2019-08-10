@@ -162,10 +162,10 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'graphql': ['prettier'],
 \}
-let g:ale_sign_error = "\uf467"
-let g:ale_sign_warning = "\uf46e"
-highlight ALEErrorSign ctermfg=196
-highlight ALEWarningSign ctermfg=226
+let g:ale_sign_error = "●"
+let g:ale_sign_warning = "●"
+highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
+highlight ALEWarningSign ctermfg=226 ctermbg=235 cterm=bold
 autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
