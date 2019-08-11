@@ -389,6 +389,7 @@ augroup PythonSettings
   autocmd!
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
   autocmd FileType python setlocal textwidth=120
+  autocmd FileType python setlocal omnifunc=ale#completion#OmniFunc
   autocmd FileType yaml setlocal shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
 
