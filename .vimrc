@@ -165,6 +165,7 @@ let g:ale_fixers = {
 \}
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
+highlight ALEError ctermbg=52
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
 highlight ALEWarningSign ctermfg=226 ctermbg=235 cterm=bold
 autocmd FileType hack let b:ale_fix_on_save = 0
