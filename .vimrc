@@ -28,6 +28,7 @@ Plug 'regedarek/ZoomWin'
 
 " Auto-complete
 Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'pgilad/vim-skeletons'
@@ -147,7 +148,7 @@ set t_Co=256
 colorscheme molokai
 
 " vim-ale settings
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_set_loclist = 0
@@ -170,6 +171,10 @@ autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
+
+" deoplete settings
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('sources', {'_': ['ale']})
 
 " lightline setup
 highlight FilenameHighlight ctermfg=250
