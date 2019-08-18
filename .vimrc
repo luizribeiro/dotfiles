@@ -156,6 +156,7 @@ let g:ale_set_quickfix = 1
 let g:ale_linters = {
 \   'hack': ['hack', 'hhast'],
 \   'python': ['pyre'],
+\   'cs': ['omnisharp-roslyn'],
 \}
 let g:ale_fixers = {
 \   'hack': ['hackfmt'],
