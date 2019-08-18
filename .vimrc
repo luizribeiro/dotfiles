@@ -34,7 +34,7 @@ Plug 'SirVer/ultisnips'
 Plug 'pgilad/vim-skeletons'
 
 " JavaScript
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'luizribeiro/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
 " Hack / PHP
