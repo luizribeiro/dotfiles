@@ -166,9 +166,10 @@ let g:ale_fixers = {
 \}
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
-highlight ALEError ctermbg=52
+highlight ALEError ctermbg=235
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
-highlight ALEWarningSign ctermfg=226 ctermbg=235 cterm=bold
+highlight ALEWarning ctermbg=235
+highlight ALEWarningSign ctermfg=220 ctermbg=235 cterm=bold
 autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
