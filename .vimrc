@@ -166,6 +166,7 @@ let g:ale_fixers = {
 \}
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
+let g:ale_cs_omnisharp_executable = '/Users/luiz/projects/omnisharp-roslyn/artifacts/publish/OmniSharp.Stdio.Driver/mono/OmniSharp.exe'
 highlight ALEError ctermbg=235
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
 highlight ALEWarning ctermbg=235
