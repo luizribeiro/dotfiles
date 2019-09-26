@@ -256,6 +256,7 @@ nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>rd :redraw!<CR>
 nnoremap <leader>rall :bufdo! e!<CR>:source $MYVIMRC<CR>
+nnoremap <leader>KA :bufdo! bd!<CR>
 nnoremap < V<
 nnoremap > V>
 
