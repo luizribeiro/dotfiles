@@ -50,6 +50,9 @@ Plug 'jparise/vim-graphql', { 'for': 'graphql' }
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
+" Misc
+Plug 'jamessan/vim-gnupg'
+
 call plug#end()
 
 " disable for terminal buffers in neovim
