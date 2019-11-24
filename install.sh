@@ -15,6 +15,7 @@ DOTFILES=(
   .gitconfig
   .gitconfig.ignore
   .gnupg/gpg-agent.conf
+  .gnupg/options
   .gvimrc
   .hgconf
   .hgrc
