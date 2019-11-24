@@ -28,6 +28,7 @@ $ chsh -s /bin/zsh
 $ brew install neovim/neovim/neovim
 $ brew install mosh wget htop
 $ brew install lastpass-cli
+$ brew install gpg pinentry-mac
 $ brew cask install alfred google-chrome iterm2 dropbox istat-menus spotify
 $ brew cask install mailspring steam slack whatsapp monitorcontrol
 $ brew tap caskroom/fonts

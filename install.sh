@@ -14,6 +14,7 @@ DOTFILES=(
   .dircolors
   .gitconfig
   .gitconfig.ignore
+  .gnupg/gpg-agent.conf
   .gvimrc
   .hgconf
   .hgrc
@@ -28,6 +29,7 @@ DOTFILES=(
   .vimperatorrc
   .vimrc
   .xinitrc
+  .zprofile
   .zshrc
 )
 
