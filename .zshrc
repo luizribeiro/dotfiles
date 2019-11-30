@@ -207,7 +207,7 @@ zle -N zle-keymap-select
 # homebrew settings
 export HOMEBREW_NO_ANALYTICS=1
 
-man() {
+function man {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
 		LESS_TERMCAP_md=$(printf "\e[1;31m") \
