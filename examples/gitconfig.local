@@ -1,0 +1,8 @@
+# vim:ft=gitconfig
+
+[user]
+	name = Luiz Ribeiro
+	email = luizribeiro@gmail.com
+
+[commit]
+	gpgsign = true
