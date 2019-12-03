@@ -15,6 +15,7 @@ Optionally, you can create the following files to customize things locally:
 
 * `~/.gitconfig.local`
 * `~/.hgrc.local`
+* `~/.ssh/local_config`
 * `~/.vimrc.local`
 * `~/.zshrc.local`
 
