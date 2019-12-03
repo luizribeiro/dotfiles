@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-OLD_PATH=`pwd`
-pushd `dirname $0` > /dev/null
-DOTFILES_PATH=`pwd`
-popd > /dev/null
+OLD_PATH=$(pwd)
+pushd "$(dirname "$0")" > /dev/null || exit
+DOTFILES_PATH=$(pwd)
+popd > /dev/null || exit
 
 DOTFILES=(
   .Xdefaults
@@ -35,7 +35,7 @@ DOTFILES=(
 )
 
 echo "Initializing dotfiles submodules... "
-cd $DOTFILES_PATH
+cd "$DOTFILES_PATH" || exit
 git submodule sync
 git submodule init
 git submodule update
@@ -52,15 +52,15 @@ do
   then
     while [[ "$REPLY" != [YyNnAa]* ]]
     do
-      read -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n/a) "
+      read -r -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n/a) "
       echo
     done
-    [[ "$REPLY" == [YyAa]* ]] && rm $HOME/$dotfile
+    [[ "$REPLY" == [YyAa]* ]] && rm "$HOME/$dotfile"
     [[ "$REPLY" != [Aa]* ]] && REPLY=''
   fi
 
   [[ ! -e "$HOME/$dotfile" ]] && echo "Installing $HOME/$dotfile" && \
-      ln -sn $DOTFILES_PATH/$dotfile $HOME/$dotfile
+      ln -sn "$DOTFILES_PATH/$dotfile" "$HOME/$dotfile"
 done
 
 echo ""
@@ -98,4 +98,4 @@ echo ""
 
 echo "All done!"
 
-cd $OLD_PATH
+cd "$OLD_PATH" || exit
