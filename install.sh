@@ -41,6 +41,7 @@ git submodule init
 git submodule update
 
 mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.gnupg"
 mkdir -p "$HOME/.ssh"
 
 echo ""
