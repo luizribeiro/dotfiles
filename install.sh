@@ -34,7 +34,7 @@ DOTFILES=(
   .zshrc
 )
 
-echo "Initializing dotfiles submodules..."
+echo "Initializing dotfiles submodules... "
 cd $DOTFILES_PATH
 git submodule sync
 git submodule init
@@ -43,7 +43,9 @@ git submodule update
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.ssh"
 
-echo "Linking config files to $HOME..."
+echo ""
+
+echo "Linking config files to $HOME... "
 for dotfile in "${DOTFILES[@]}"
 do
   if [[ -e "$HOME/$dotfile" ]]
@@ -61,16 +63,22 @@ do
       ln -sn $DOTFILES_PATH/$dotfile $HOME/$dotfile
 done
 
-echo "Installing vundle plugins"
-vim +PlugInstall +qall
+echo ""
 
+echo -n "Installing vim-plug plugins... "
+vim +PlugInstall +qall
+echo "Done."
+
+echo ""
 
 if [ -x "$(command -v gpg)" ]; then
-  echo "Import GPG public key"
+  echo "Importing GPG public key... "
   PUBLIC_KEY_FILE="./my-public-key.asc"
   gpg --import $PUBLIC_KEY_FILE
 
-  echo "Ultimately trusting the key"
+  echo ""
+
+  echo -n "Ultimately trusting the GPG key... "
   FINGERPRINT=$(
     gpg --with-colons --import-options show-only --import \
       --fingerprint < my-public-key.asc | \
@@ -78,9 +86,16 @@ if [ -x "$(command -v gpg)" ]; then
       head -1
   )
   echo "$FINGERPRINT:6:" | gpg --import-ownertrust
+  echo "Done."
 
-  echo "Current keys:"
+  echo ""
+
+  echo "Current GPG keys:"
   gpg --list-keys
 fi
+
+echo ""
+
+echo "All done!"
 
 cd $OLD_PATH
