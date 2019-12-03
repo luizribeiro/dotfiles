@@ -64,4 +64,23 @@ done
 echo "Installing vundle plugins"
 vim +PlugInstall +qall
 
+
+if [ -x "$(command -v gpg)" ]; then
+  echo "Import GPG public key"
+  PUBLIC_KEY_FILE="./my-public-key.asc"
+  gpg --import $PUBLIC_KEY_FILE
+
+  echo "Ultimately trusting the key"
+  FINGERPRINT=$(
+    gpg --with-colons --import-options show-only --import \
+      --fingerprint < my-public-key.asc | \
+      awk -F: '$1 == "fpr" {print $10;}' | \
+      head -1
+  )
+  echo "$FINGERPRINT:6:" | gpg --import-ownertrust
+
+  echo "Current keys:"
+  gpg --list-keys
+fi
+
 cd $OLD_PATH
