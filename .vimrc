@@ -52,6 +52,7 @@ Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
 " Misc
 Plug 'jamessan/vim-gnupg'
+Plug 'lambdalisue/suda.vim'
 
 call plug#end()
 
@@ -464,9 +465,6 @@ au InsertLeave * set nopaste
 
 " resize windows when vim is resized
 au VimResized * exe "normal! \<c-w>="
-
-" when you forget about sudo
-cmap w!! w !sudo tee % >/dev/null
 
 " add require
 command! -nargs=+ Require call append(line('.'), "const <args> = require('<args>');")
