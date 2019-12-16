@@ -1,5 +1,7 @@
 # luizribeiro/dotfiles
 
+[![Build Status](https://travis-ci.com/luizribeiro/dotfiles.svg?branch=master)](https://travis-ci.com/luizribeiro/dotfiles)
+
 I store my own UNIX config files here.
 
 ## Install
