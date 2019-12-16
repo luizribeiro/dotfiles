@@ -10,6 +10,7 @@ DOTFILES=(
   .Xresources
   .alacritty.yml
   .bin
+  .config/htop
   .config/nvim
   .dircolors
   .gitconfig
