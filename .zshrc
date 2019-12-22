@@ -120,7 +120,7 @@ export hist_ignore_all_dups
 export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
 setopt correctall
 
