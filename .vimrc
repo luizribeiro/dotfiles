@@ -50,6 +50,7 @@ Plug 'jparise/vim-graphql', { 'for': 'graphql' }
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 Plug 'cmcaine/vim-uci'
+Plug 'tmatilai/vim-monit'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
