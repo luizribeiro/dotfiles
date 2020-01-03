@@ -69,7 +69,7 @@ done
 echo ""
 
 echo -n "Installing vim-plug plugins... "
-vim +PlugInstall +qall
+vim +PlugInstall +qall > /dev/null
 echo "Done."
 
 echo ""
