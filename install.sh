@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+while getopts ":A" opt; do
+  case ${opt} in
+    A )
+      OVERWRITE_ALL=true
+      ;;
+    \? )
+      echo "Usage: ./install.sh [-h] [-A]"
+      exit 1
+      ;;
+  esac
+done
+
 OLD_PATH=$(pwd)
 pushd "$(dirname "$0")" > /dev/null || exit
 DOTFILES_PATH=$(pwd)
@@ -53,6 +65,7 @@ for dotfile in "${DOTFILES[@]}"
 do
   if [[ -e "$HOME/$dotfile" ]]
   then
+    [[ $OVERWRITE_ALL = true ]] && REPLY="a"
     while [[ "$REPLY" != [YyNnAa]* ]]
     do
       read -r -n1 -p "$HOME/$dotfile exists. Overwrite? (y/n/a) "
