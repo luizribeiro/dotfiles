@@ -28,6 +28,11 @@ Finder() {
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 } ; setup Finder
 
+Keyboard() {
+  defaults write NSGlobalDomain InitialKeyRepeat -int 15
+  defaults write NSGlobalDomain KeyRepeat -int 2
+} ; setup Keyboard
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
