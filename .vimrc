@@ -51,6 +51,7 @@ Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 Plug 'cmcaine/vim-uci'
 Plug 'tmatilai/vim-monit'
+Plug 'chr4/nginx.vim'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
