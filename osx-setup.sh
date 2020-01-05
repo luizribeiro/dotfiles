@@ -26,6 +26,7 @@ Alfred() {
 
 Finder() {
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+  defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 } ; setup Finder
 
 Keyboard() {
