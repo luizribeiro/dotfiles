@@ -20,10 +20,14 @@ iTerm2() {
   defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 } ; setup iTerm2
 
+Alfred() {
+  defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/.dotfiles/osx/alfred"
+} ; setup Alfred
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
-  for app in "Dock" "iTerm2"; do
+  for app in "Dock" "iTerm2" "Alfred"; do
     killall "${app}" > /dev/null 2>&1
   done
 fi
