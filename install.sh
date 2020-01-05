@@ -81,8 +81,14 @@ done
 
 echo ""
 
+if ! type "nvim" > /dev/null; then
+  VIM="vim"
+else
+  VIM="nvim"
+fi
+
 echo -n "Installing vim-plug plugins... "
-vim +PlugInstall +qall > /dev/null
+$VIM +PlugInstall +qall > /dev/null
 echo "Done."
 
 echo ""
