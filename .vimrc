@@ -52,6 +52,7 @@ Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 Plug 'cmcaine/vim-uci'
 Plug 'tmatilai/vim-monit'
 Plug 'chr4/nginx.vim'
+Plug 'pearofducks/ansible-vim'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
