@@ -28,6 +28,8 @@ Finder() {
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
   defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
   defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+  chflags nohidden ~/Library
 } ; setup Finder
 
 Keyboard() {
