@@ -113,7 +113,7 @@ if [ -x "$(command -v gpg)" ]; then
   echo ""
 
   echo "Current GPG keys:"
-  gpg --list-keys
+  gpg --list-keys "luizribeiro@gmail.com"
 fi
 
 echo ""
