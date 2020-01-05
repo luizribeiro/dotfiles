@@ -24,10 +24,14 @@ Alfred() {
   defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/.dotfiles/osx/alfred"
 } ; setup Alfred
 
+Finder() {
+  defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+} ; setup Finder
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
-  for app in "Dock" "iTerm2" "Alfred"; do
+  for app in "Dock" "iTerm2" "Alfred" "Finder"; do
     killall "${app}" > /dev/null 2>&1
   done
 fi
