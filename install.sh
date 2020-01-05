@@ -118,6 +118,11 @@ fi
 
 echo ""
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ./osx-setup.sh --no-restart
+  echo ""
+fi
+
 echo "All done!"
 
 cd "$OLD_PATH" || exit
