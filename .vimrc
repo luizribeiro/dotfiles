@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 call plug#begin('~/.vim/bundle')
 " UI quality of life
 Plug 'mhinz/vim-startify'
@@ -80,7 +82,7 @@ set scrolloff=3
 set switchbuf=useopen
 set history=2000
 filetype plugin indent on
-let mapleader=","
+let g:mapleader=","
 nmap <space> ,
 set showbreak=↪
 set ttyfast
