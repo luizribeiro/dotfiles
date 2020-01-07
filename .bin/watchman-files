@@ -41,7 +41,7 @@ then
   exit
 fi
 
-if [ -f .watchman-files ] && [ ! `find ".watchman-files" -mmin +15` ]
+if [ -f .watchman-files ] && [ ! "$(find ".watchman-files" -mmin +15)" ]
 then
   cat .watchman-files
   exit

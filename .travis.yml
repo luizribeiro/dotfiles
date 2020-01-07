@@ -15,5 +15,7 @@ before_script:
   - vim --version
 
 script:
-  - shellcheck install.sh .zshrc .zprofile .bin/*
+  - shellcheck install.sh
+  - shellcheck .bin/print-colors
+  - shellcheck .bin/watchman-files
   - sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
