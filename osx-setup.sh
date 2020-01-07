@@ -13,6 +13,8 @@ Dock() {
   defaults write com.apple.dock tilesize -int 40
   defaults write com.apple.dock magnification -bool true
   defaults write com.apple.dock largesize -int 100
+
+  defaults write com.apple.dock show-recents -bool false
 } ; setup Dock
 
 iTerm2() {
