@@ -57,6 +57,15 @@ General() {
   defaults write -g AppleShowScrollBars -string WhenScrolling
 } ; setup General
 
+LanguageAndRegion() {
+  defaults write NSGlobalDomain AppleLanguages -array "en-US" "pt-BR"
+  defaults write NSGlobalDomain AppleLocale -string "en_US"
+  defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+  defaults write NSGlobalDomain AppleTemperatureUnit -string "Celsius"
+  defaults write NSGlobalDomain AppleMetricUnits -bool true
+  defaults write NSGlobalDomain AppleICUForce12HourTime -bool false
+} ; setup LanguageAndRegion
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
