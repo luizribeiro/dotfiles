@@ -39,6 +39,9 @@ Finder() {
   defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
   chflags nohidden ~/Library
+
+  # avoid creating .DS_store files on network volumes
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 } ; setup Finder
 
 Keyboard() {
