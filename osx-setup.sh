@@ -39,6 +39,7 @@ Finder() {
   defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
   defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+  defaults write com.apple.finder ShowStatusBar -bool true
 
   chflags nohidden ~/Library
 
