@@ -47,6 +47,14 @@ Trackpad() {
   defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 } ; setup Trackpad
 
+Mouse() {
+  defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+} ; setup Mouse
+
+General() {
+  defaults write -g AppleShowScrollBars -string WhenScrolling
+} ; setup General
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
