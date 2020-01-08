@@ -16,6 +16,7 @@ before_script:
 
 script:
   - shellcheck install.sh
+  - shellcheck osx-setup.sh
   - shellcheck .bin/print-colors
   - shellcheck .bin/watchman-files
   - sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc

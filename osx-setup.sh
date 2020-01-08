@@ -20,12 +20,12 @@ Dock() {
 } ; setup Dock
 
 iTerm2() {
-  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/osx/iterm2/"
+  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${HOME}/.dotfiles/osx/iterm2/"
   defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 } ; setup iTerm2
 
 Alfred() {
-  defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/.dotfiles/osx/alfred"
+  defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "${HOME}/.dotfiles/osx/alfred"
 } ; setup Alfred
 
 Finder() {
