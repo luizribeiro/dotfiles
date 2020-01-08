@@ -33,6 +33,8 @@ Finder() {
   defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
   defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
+  defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
   chflags nohidden ~/Library
 } ; setup Finder
 
