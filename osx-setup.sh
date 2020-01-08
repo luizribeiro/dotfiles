@@ -8,6 +8,8 @@ function setup() {
 
 echo "Setting up OSX Settings..."
 
+osascript -e 'tell application "System Preferences" to quit'
+
 Dock() {
   defaults write com.apple.dock tilesize -int 40
   defaults write com.apple.dock largesize -int 100
