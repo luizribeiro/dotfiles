@@ -9,11 +9,11 @@ function setup() {
 echo "Setting up OSX Settings..."
 
 Dock() {
-  defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock tilesize -int 40
-  defaults write com.apple.dock magnification -bool true
   defaults write com.apple.dock largesize -int 100
+  defaults write com.apple.dock magnification -bool true
 
+  defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock show-recents -bool false
 } ; setup Dock
 
