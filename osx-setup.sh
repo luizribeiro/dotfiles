@@ -38,6 +38,8 @@ Finder() {
   defaults write com.apple.finder NewWindowTarget -string "PfLo"
   defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
+  defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
   chflags nohidden ~/Library
 
   # avoid creating .DS_store files on network volumes
