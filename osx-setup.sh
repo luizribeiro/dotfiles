@@ -35,6 +35,9 @@ Finder() {
 
   defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+  defaults write com.apple.finder NewWindowTarget -string "PfLo"
+  defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
   chflags nohidden ~/Library
 } ; setup Finder
 
