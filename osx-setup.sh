@@ -31,7 +31,7 @@ Alfred() {
 Finder() {
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
   defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-  defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+  defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
   defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
