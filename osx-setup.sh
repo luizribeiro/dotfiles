@@ -77,6 +77,12 @@ LanguageAndRegion() {
   defaults write NSGlobalDomain AppleICUForce12HourTime -bool false
 } ; setup LanguageAndRegion
 
+SecurityAndPrivacy() {
+  # require password immediately after sleep or screen saver begins
+  defaults write com.apple.screensaver askForPassword -int 1
+  defaults write com.apple.screensaver askForPasswordDelay -int 0
+}
+
 Spotlight() {
   # disable spotlight on cmd-space so Alfred can use it
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 \
