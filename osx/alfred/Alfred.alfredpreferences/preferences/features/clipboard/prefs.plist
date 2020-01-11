@@ -4,5 +4,14 @@
 <dict>
 	<key>autoPaste</key>
 	<false/>
+	<key>blacklist</key>
+	<array>
+		<string>Keychain Access</string>
+		<string>SecurityAgent</string>
+		<string>1Password</string>
+		<string>Wallet</string>
+		<string>Authy Desktop</string>
+		<string>LastPass</string>
+	</array>
 </dict>
 </plist>
