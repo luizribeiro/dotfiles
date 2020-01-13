@@ -55,6 +55,8 @@ Finder() {
 Keyboard() {
   defaults write NSGlobalDomain InitialKeyRepeat -int 15
   defaults write NSGlobalDomain KeyRepeat -int 2
+
+  defaults import com.apple.symbolichotkeys osx/symbolichotkeys.plist
 } ; setup Keyboard
 
 Trackpad() {
@@ -87,15 +89,6 @@ SecurityAndPrivacy() {
   defaults write com.apple.screensaver askForPassword -int 1
   defaults write com.apple.screensaver askForPasswordDelay -int 0
 }
-
-Spotlight() {
-  # disable spotlight on cmd-space so Alfred can use it
-  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 \
-    "{ enabled = 0; value = { parameters = ( 32, 49, 1048576); type = standard; }; }"
-  # disable spotlight window shortcut
-  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 \
-    "{ enabled = 0; value = { parameters = ( 32, 49, 1048576); type = standard; }; }"
-} ; setup Spotlight
 
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
