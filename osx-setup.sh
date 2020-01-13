@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+OLD_PATH=$(pwd)
+pushd "$(dirname "$0")" > /dev/null || exit
+DOTFILES_PATH=$(pwd)
+popd > /dev/null || exit
+
 function setup() {
   echo -n "Setting up $1... "
   $1
@@ -99,3 +104,5 @@ if [[ ! ($* == *--no-restart*) ]]; then
     killall "${app}" > /dev/null 2>&1
   done
 fi
+
+cd "$OLD_PATH" || exit
