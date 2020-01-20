@@ -56,6 +56,9 @@ Keyboard() {
   defaults write NSGlobalDomain InitialKeyRepeat -int 15
   defaults write NSGlobalDomain KeyRepeat -int 2
 
+  # this is generated with:
+  # defaults export com.apple.symbolichotkeys osx/symbolichotkeys.plist
+  # plutil -convert xml1 osx/symbolichotkeys.plist
   defaults import com.apple.symbolichotkeys osx/symbolichotkeys.plist
 } ; setup Keyboard
 
