@@ -1,9 +1,8 @@
 {
     "layouts": [
+        "floating",
         "tall",
-        "wide",
-        "fullscreen",
-        "column"
+        "fullscreen"
     ],
     "Valid modifiers are": [
         "option",
@@ -205,12 +204,14 @@
     "floating-is-blacklist": true,
     "float-small-windows": true,
     "mouse-follows-focus": false,
+    "mouse-resizes-windows": true,
+    "mouse-swaps-windows": true,
     "focus-follows-mouse": false,
     "enables-layout-hud": true,
     "enables-layout-hud-on-space-change": true,
-    "window-margin-size": 0,
+    "window-margin-size": 1,
     "window-resize-step": 5,
-    "window-margins": false,
+    "window-margins": true,
     "window-minimum-height": 0,
     "window-minimum-width": 0,
     "ignore-menu-bar": false,
