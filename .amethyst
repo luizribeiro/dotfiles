@@ -204,6 +204,10 @@
       {
         "id": "com.todoist.mac.Todoist",
         "window-titles": []
+      },
+      {
+        "id": "com.microsoft.Outlook",
+        "window-titles": ["Reminder"]
       }
     ],
     "floating-is-blacklist": true,
