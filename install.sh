@@ -21,6 +21,7 @@ DOTFILES=(
   .Xdefaults
   .Xresources
   .alacritty.yml
+  .amethyst
   .bin
   .config/htop
   .config/nvim
