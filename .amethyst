@@ -200,7 +200,12 @@
         "mod": "mod2",
         "key": "x"
     },
-    "floating": [],
+    "floating": [
+      {
+        "id": "com.todoist.mac.Todoist",
+        "window-titles": []
+      }
+    ],
     "floating-is-blacklist": true,
     "float-small-windows": true,
     "mouse-follows-focus": false,
