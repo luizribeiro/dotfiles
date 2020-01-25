@@ -29,7 +29,7 @@ DOTFILES=(
   .gitconfig
   .gitconfig.ignore
   .gnupg/gpg-agent.conf
-  .gnupg/options
+  .gnupg/gpg.conf
   .gvimrc
   .hgconf
   .hgrc
