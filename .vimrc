@@ -315,7 +315,6 @@ function! FZFWatchman()
   endif
 endfunction
 nnoremap <silent> <leader>f :call FZFWatchman()<cr>
-nnoremap <silent> <leader>r :Rg 
 nnoremap <silent> <leader>R :Rg <c-r><c-w><cr>
 nnoremap <silent> <leader><leader>f :Files %:p:h<cr>
 
@@ -362,6 +361,7 @@ CommandCabbr Vsp vsp
 CommandCabbr VSp vsp
 CommandCabbr hs HS
 CommandCabbr Hs HS
+CommandCabbr rg Rg
 
 " My replacement for g], which goes into quickfix
 command! -nargs=1 Function call s:Function(<f-args>)
