@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # tiling options
-yabai -m config layout bsp
+yabai -m config layout float
 
 # mouse support
-yabai -m config focus_follows_mouse autofocus
+yabai -m config focus_follows_mouse off
 
 # window modifications
-yabai -m config window_shadow float
+yabai -m config window_shadow on
 yabai -m config window_gap 2
 
 # automatically float these apps
