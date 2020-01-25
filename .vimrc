@@ -87,6 +87,7 @@ nmap <space> ,
 set showbreak=↪
 set ttyfast
 set showmatch
+set signcolumn=yes
 
 " disable backup and swap files
 set nobackup
