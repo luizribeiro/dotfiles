@@ -9,3 +9,4 @@ osx/alfred/Alfred.alfredpreferences/preferences/local/
 .bin/fzf
 .ssh/*
 !.ssh/config
+!*.example
