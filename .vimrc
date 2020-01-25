@@ -159,13 +159,14 @@ colorscheme molokai
 
 " vim-ale settings
 let g:ale_completion_enabled = 0
+let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
 \   'hack': ['hack', 'hhast'],
-\   'python': ['pyre'],
+\   'python': ['pyls', 'pyre'],
 \   'cs': ['omnisharp-roslyn'],
 \}
 let g:ale_fixers = {
