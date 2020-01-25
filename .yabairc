@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# tiling options
+yabai -m config layout bsp
+
+# mouse support
+yabai -m config focus_follows_mouse autofocus
+
+# window modifications
+yabai -m config window_shadow float
+yabai -m config window_gap 2
+
+# automatically float these apps
+yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Steam$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Todoist$" manage=off

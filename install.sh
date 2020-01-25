@@ -44,6 +44,7 @@ DOTFILES=(
   .vimperatorrc
   .vimrc
   .xinitrc
+  .yabairc
   .zprofile
   .zshrc
 )
