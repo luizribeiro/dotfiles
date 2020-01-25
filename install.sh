@@ -37,6 +37,7 @@ DOTFILES=(
   .htoprc
   .nvim
   .nvimrc
+  .skhdrc
   .ssh/config
   .tmux.conf
   .vim
