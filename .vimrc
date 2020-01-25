@@ -168,6 +168,7 @@ let g:ale_linters = {
 \   'hack': ['hack', 'hhast'],
 \   'python': ['pyls', 'pyre'],
 \   'cs': ['omnisharp-roslyn'],
+\   'javascript': ['flow-language-server'],
 \}
 let g:ale_fixers = {
 \   'hack': ['hackfmt'],
@@ -406,6 +407,7 @@ augroup END
 " flow/hack settings
 let g:flow#autoclose=1
 let g:hack#autoclose=1
+let g:flow#showquickfix = 0
 
 " python settings
 augroup PythonSettings
