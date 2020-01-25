@@ -97,6 +97,9 @@ echo "Done."
 echo ""
 
 if [ -x "$(command -v gpg)" ]; then
+  GPG_VERSION="$(gpg --version | grep GnuPG | cut -f 3 -d ' ')"
+  echo "Using GnuPG $GPG_VERSION"
+
   echo "Importing GPG public key... "
   PUBLIC_KEY_FILE="./my-public-key.asc"
   gpg --import $PUBLIC_KEY_FILE
@@ -104,12 +107,7 @@ if [ -x "$(command -v gpg)" ]; then
   echo ""
 
   echo -n "Ultimately trusting the GPG key... "
-  FINGERPRINT=$(
-    gpg --with-colons --import-options show-only --import \
-      --fingerprint < my-public-key.asc | \
-      awk -F: '$1 == "fpr" {print $10;}' | \
-      head -1
-  )
+  FINGERPRINT="97A0AE5E03F3499B7D7A65C676A4143237EF5817"
   echo "$FINGERPRINT:6:" | gpg --import-ownertrust
   echo "Done."
 
