@@ -32,9 +32,6 @@ Plug 'regedarek/ZoomWin'
 " Auto-complete
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips'
-Plug 'pgilad/vim-skeletons'
 
 " JavaScript
 Plug 'luizribeiro/vim-javascript', { 'for': 'javascript' }
@@ -195,8 +192,19 @@ nnoremap <silent> gd :ALEGoToDefinition<CR>
 
 " deoplete settings
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('auto_complete', 1)
 call deoplete#custom#option('sources', {'_': ['ale']})
 call deoplete#custom#source('_', 'max_menu_width', 80)
+set pumheight=10
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ deoplete#manual_complete()
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
 
 " lightline setup
 highlight FilenameHighlight ctermfg=250
@@ -482,23 +490,6 @@ nnoremap <silent> <leader>h :sp<cr>
 " vimux
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
-
-" supertab
-let g:SuperTabLongestEnhanced = 1
-let g:SuperTabLeadingSpaceCompletion = 0
-let g:SuperTabClosePreviewOnPopupClose = 1
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType ="<c-x><c-o>"
-
-" ultisnips
-let g:UltiSnipsSnippetDirectories=['snips', 'snips.local']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" ultisnips skeletons
-let skeletons#autoRegister = 1
-let skeletons#skeletonsDir = [glob("~/.vim/skels"), glob("~/.vim/skels.local")]
 
 " delimMate
 let g:delimitMate_expand_cr = 1
