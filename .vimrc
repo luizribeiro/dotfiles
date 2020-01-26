@@ -488,6 +488,8 @@ nnoremap <silent> <leader>v :vsp<cr>
 nnoremap <silent> <leader>h :sp<cr>
 
 " vimux
+nnoremap <silent> <leader>! :call VimuxRunCommand('!!')<cr>
+nnoremap <silent> <leader>O :call VimuxRunCommand('clear')<cr>
 command! -nargs=+ C call VimuxRunCommand(<q-args>)
 CommandCabbr c C
 
@@ -524,5 +526,3 @@ endfunction
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-nnoremap <silent> <leader>! :call VimuxRunCommand('!!')<cr>
