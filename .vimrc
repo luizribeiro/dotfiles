@@ -304,7 +304,30 @@ if has('nvim')
 endif
 
 " fzf
-let g:fzf_layout = { 'down': '~20%' }
+if has('nvim')
+  let $FZF_DEFAULT_OPTS .= ' --layout=reverse'
+
+  function! FloatingFZF()
+    let height = float2nr(&lines - (&lines * 1 / 10))
+    let width = float2nr(&columns - (&columns * 1 / 10))
+    let col_offset = &columns / 20
+    let row_offset = &lines / 20
+    let opts = {
+          \ 'relative': 'editor',
+          \ 'row': row_offset,
+          \ 'col': col_offset,
+          \ 'width': width,
+          \ 'height': height,
+          \ }
+    let buf = nvim_create_buf(v:false, v:true)
+    let win = nvim_open_win(buf, v:true, opts)
+    call setwinvar(win, '&winhl', '')
+  endfunction
+
+  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+else
+  let g:fzf_layout = { 'down': '~20%' }
+endif
 let g:fzf_nvim_statusline = 0
 nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <leader>m :History<cr>
