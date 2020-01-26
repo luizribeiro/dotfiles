@@ -295,26 +295,7 @@ let g:fzf_layout = { 'down': '~20%' }
 let g:fzf_nvim_statusline = 0
 nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <leader>m :History<cr>
-
-" fzf watchman
-function! FZFWatchman()
-  if file_readable('.watchmanconfig')
-    let opts = copy(get(g:, 'fzf_layout', { 'down': '~20%' }))
-    call fzf#run(extend(opts, fzf#wrap({
-    \ 'name': 'files',
-    \ 'source': 'watchman-files',
-    \ 'options': '-m --prompt "watchman> "'
-    \ })))
-  else
-    call system('git rev-parse --show-toplevel')
-    if v:shell_error
-      Files
-    else
-      GitFiles
-    endif
-  endif
-endfunction
-nnoremap <silent> <leader>f :call FZFWatchman()<cr>
+nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>R :Rg <c-r><c-w><cr>
 nnoremap <silent> <leader><leader>f :Files %:p:h<cr>
 
