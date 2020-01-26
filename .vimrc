@@ -8,6 +8,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Yggdroot/indentLine'
 Plug 'Raimondi/delimitMate'
+Plug 'farmergreg/vim-lastplace'
 
 " Integration with tmux
 Plug 'christoomey/vim-tmux-navigator'
