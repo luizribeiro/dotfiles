@@ -195,6 +195,7 @@ nnoremap <silent> gd :ALEGoToDefinition<CR>
 " deoplete settings
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('sources', {'_': ['ale']})
+call deoplete#custom#source('_', 'max_menu_width', 80)
 
 " lightline setup
 highlight FilenameHighlight ctermfg=250
