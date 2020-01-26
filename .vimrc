@@ -304,7 +304,7 @@ if has('nvim')
 endif
 
 " fzf
-if has('nvim')
+if has('nvim-0.4.0')
   let $FZF_DEFAULT_OPTS .= ' --layout=reverse'
 
   function! FloatingFZF()
