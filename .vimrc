@@ -88,6 +88,9 @@ set showbreak=↪
 set ttyfast
 set showmatch
 set signcolumn=yes
+augroup SignColumn
+  autocmd! TermOpen * setlocal signcolumn=no
+augroup END
 
 " disable backup and swap files
 set nobackup
