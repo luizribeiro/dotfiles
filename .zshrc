@@ -219,11 +219,6 @@ function man {
 		man "$@"
 }
 
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  # set terminal window title
-  echo -n "\e]1;$HOST\e\\"
-fi
-
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
