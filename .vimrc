@@ -480,9 +480,6 @@ nnoremap <leader>n :set relativenumber!<cr>
 " I hate plugin mappings
 let g:no_plugin_maps = 1
 
-nnoremap <silent> <C-w>% :sp<cr>
-nnoremap <silent> <C-w>" :vsp<cr>
-
 set splitright
 set splitbelow
 
@@ -511,9 +508,12 @@ nnoremap <leader>cl :Clog <c-r>=expand("<cword>")<cr><cr>j=$
 vnoremap <leader>cl y:Clog <c-r><c-"><cr>j=$
 CommandCabbr clog Clog
 
-" handy keymaps
+" keymaps for manipulating splits and tabs
 nnoremap <silent> <leader>v :vsp<cr>
 nnoremap <silent> <leader>h :sp<cr>
+nnoremap <silent> <leader>t :tab split<cr>
+nnoremap <silent> <C-w>% :sp<cr>
+nnoremap <silent> <C-w>" :vsp<cr>
 
 " vimux
 nnoremap <silent> <leader>! :call VimuxRunCommand('!!')<cr>
