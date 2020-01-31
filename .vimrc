@@ -287,7 +287,7 @@ nnoremap < V<
 nnoremap > V>
 
 " Startify
-nnoremap <silent> <leader>H :Startify<cr>
+nnoremap <silent> <leader>S :Startify<cr>
 let g:startify_custom_header=[]
 let g:startify_list_order=['dir', 'files', 'bookmarks', 'sessions']
 let g:startify_change_to_dir=0
@@ -450,7 +450,6 @@ augroup END
 " other Hack stuff
 nmap <leader>T :HackType<cr>
 nmap <leader>F :HackFormat<cr>
-nmap <leader>S :HackSearch<cr>
 command! -nargs=? -bang HS call hack#search('<bang>' == '!', <q-args>)
 
 " Listener/send stuff {{{
