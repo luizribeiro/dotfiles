@@ -334,6 +334,12 @@ nnoremap <silent> <leader>m :History<cr>
 nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>R :Rg <c-r><c-w><cr>
 nnoremap <silent> <leader><leader>f :Files %:p:h<cr>
+command! -bang -nargs=? -complete=dir HGFiles call fzf#run({
+  \ 'source': "hg status -n --rev '.^'",
+  \ 'sink': 'e',
+  \ })
+
+nmap <Leader>H :HGFiles<CR>
 
 inoremap <esc> <esc>`^
 nnoremap S ddO
