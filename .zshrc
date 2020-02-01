@@ -219,6 +219,11 @@ function man {
 		man "$@"
 }
 
+set_terminal_tab_title() {
+  print -Pn "\e]1;$1:q\a"
+}
+set_terminal_tab_title "$USER@$HOST"
+
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
