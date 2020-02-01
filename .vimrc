@@ -53,6 +53,7 @@ Plug 'cmcaine/vim-uci'
 Plug 'tmatilai/vim-monit'
 Plug 'chr4/nginx.vim'
 Plug 'pearofducks/ansible-vim'
+Plug 'HiPhish/jinja.vim'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
