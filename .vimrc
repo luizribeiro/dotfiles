@@ -54,6 +54,7 @@ Plug 'tmatilai/vim-monit'
 Plug 'chr4/nginx.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'HiPhish/jinja.vim'
+Plug 'cespare/vim-toml'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
