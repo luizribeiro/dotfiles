@@ -17,3 +17,4 @@ yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Todoist$" manage=off
 yabai -m rule --add app="^Cisco AnyConnect" manage=off
 yabai -m rule --add app="^Authy$" manage=off
+yabai -m rule --add app="^Simulator$" manage=off topmost=on
