@@ -97,10 +97,21 @@ set nobackup
 set noswapfile
 
 " clipboard integration
-if !has('nvim')
-  " for some reason this only works on regular vim. need to fix my clipboard
-  " integration on neovim
-  set clipboard=unnamed
+if has('nvim')
+  " always use the clipboard for all operations
+  set clipboard+=unnamedplus
+  let g:clipboard = {
+        \   'name': 'myClipboard',
+        \   'copy': {
+        \     '+': 'clipsync',
+        \     '*': 'clipsync',
+        \   },
+        \   'paste': {
+        \      '+': '+',
+        \      '*': '*',
+        \   },
+        \   'cache_enabled': 1,
+        \ }
 endif
 
 " vim-pencil settings

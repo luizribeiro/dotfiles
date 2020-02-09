@@ -1,0 +1,13 @@
+#!/bin/bash
+
+INPUT=$(cat)
+
+if command -v pbcopy >/dev/null ; then
+  echo ${INPUT} | pbcopy
+else
+  echo ${INPUT} | it2copy
+fi
+
+if [[ -n "$TMUX" ]]; then
+  echo ${INPUT} | tmux load-buffer -
+fi
