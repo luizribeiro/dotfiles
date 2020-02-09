@@ -107,11 +107,6 @@ alias man='nocorrect man'
 alias git='nocorrect git'
 alias hg='nocorrect hg'
 alias rg='nocorrect rg'
-send() { echo $* | nc localhost 52698 }
-if (( !$+commands[pbcopy] )) ; then
-  alias pbcopy='sed 1i"copy" | nc localhost 52698'
-fi
-alias notify='send notify done'
 
 export GREP_COLOR='1;31'
 export GREP_COLORS='fn=38;5;8:ln=38;5;8:bn=38;5;8:se=38;5;8'
