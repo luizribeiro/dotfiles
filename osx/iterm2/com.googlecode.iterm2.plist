@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -478,7 +478,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1155 0 1405 1417 0 0 2560 1417 </string>
+	<string>1429 0 1130 1417 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 2560 1417 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1301,6 +1301,7 @@
 		<string>3.3.8beta2</string>
 		<string>3.3.8beta4</string>
 		<string>3.3.8beta5</string>
+		<string>3.3.9beta1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -1319,7 +1320,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>45B9FCF2-CB60-424D-A699-EDDD274BE555</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>313</integer>
+	<integer>319</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2116,7 +2117,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-06T13:10:19Z</date>
+	<date>2020-02-09T16:34:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2184,7 +2185,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.8beta5</string>
+	<string>3.3.9beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
