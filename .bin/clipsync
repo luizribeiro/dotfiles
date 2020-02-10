@@ -2,10 +2,14 @@
 
 INPUT=$(cat)
 
-if command -v pbcopy &> /dev/null ; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "$INPUT" | pbcopy
 else
-  echo "$INPUT" | nc -c 127.0.0.1 52698
+  if nc --version &> /dev/null | grep "GNU" ; then
+    echo "$INPUT" | nc -c 127.0.0.1 52698
+  else
+    echo "$INPUT" | nc 127.0.0.1 52698
+  fi
 fi
 
 if [[ -n "$TMUX" ]]; then
