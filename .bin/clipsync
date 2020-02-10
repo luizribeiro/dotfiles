@@ -2,10 +2,10 @@
 
 INPUT=$(cat)
 
-if command -v pbcopy >/dev/null ; then
+if command -v pbcopy &> /dev/null ; then
   echo ${INPUT} | pbcopy
 else
-  echo ${INPUT} | it2copy
+  echo ${INPUT} | gpg -q --encrypt | nc -c 127.0.0.1 52698
 fi
 
 if [[ -n "$TMUX" ]]; then

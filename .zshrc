@@ -222,6 +222,10 @@ precmd() {
   set_terminal_tab_title "$USER@$HOST"
 }
 
+if (( !$+commands[pbcopy] )) ; then
+  alias pbcopy='nc -c 127.0.0.1 52698'
+fi
+
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
