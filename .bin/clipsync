@@ -3,11 +3,11 @@
 INPUT=$(cat)
 
 if command -v pbcopy &> /dev/null ; then
-  echo ${INPUT} | pbcopy
+  echo "$INPUT" | pbcopy
 else
-  echo ${INPUT} | nc -c 127.0.0.1 52698
+  echo "$INPUT" | nc -c 127.0.0.1 52698
 fi
 
 if [[ -n "$TMUX" ]]; then
-  echo ${INPUT} | tmux load-buffer -
+  echo "$INPUT" | tmux load-buffer -
 fi
