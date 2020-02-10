@@ -98,8 +98,7 @@ set noswapfile
 
 " clipboard integration
 if has('nvim')
-  " always use the clipboard for all operations
-  set clipboard+=unnamedplus
+  set clipboard=
   let g:clipboard = {
         \   'name': 'myClipboard',
         \   'copy': {
