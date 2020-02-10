@@ -223,7 +223,7 @@ precmd() {
 }
 
 if (( !$+commands[pbcopy] )) ; then
-  alias pbcopy='nc -c 127.0.0.1 52698'
+  alias pbcopy='clipsync'
 fi
 
 # load local settings
