@@ -183,12 +183,14 @@ let g:ale_linters = {
 \   'python': ['pyls', 'pyre'],
 \   'cs': ['omnisharp-roslyn'],
 \   'javascript': ['flow-language-server'],
+\   'yaml': ['yamllint'],
 \}
 let g:ale_fixers = {
 \   'hack': ['hackfmt'],
 \   'python': ['black'],
 \   'javascript': ['prettier'],
 \   'graphql': ['prettier'],
+\   'yaml': ['prettier'],
 \}
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
