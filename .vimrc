@@ -184,6 +184,7 @@ let g:ale_linters = {
 \   'javascript': ['flow-language-server'],
 \   'python': ['pyls', 'pyre'],
 \   'yaml': ['yamllint'],
+\   'vim': ['vint'],
 \}
 let g:ale_fixers = {
 \   'graphql': ['prettier'],
