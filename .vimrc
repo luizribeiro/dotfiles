@@ -179,17 +179,17 @@ let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
-\   'hack': ['hack', 'hhast'],
-\   'python': ['pyls', 'pyre'],
 \   'cs': ['omnisharp-roslyn'],
+\   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
+\   'python': ['pyls', 'pyre'],
 \   'yaml': ['yamllint'],
 \}
 let g:ale_fixers = {
-\   'hack': ['hackfmt'],
-\   'python': ['black'],
-\   'javascript': ['prettier'],
 \   'graphql': ['prettier'],
+\   'hack': ['hackfmt'],
+\   'javascript': ['prettier'],
+\   'python': ['black'],
 \   'yaml': ['prettier'],
 \}
 let g:ale_sign_error = "●"
