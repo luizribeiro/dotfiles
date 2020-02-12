@@ -187,6 +187,7 @@ let g:ale_linters = {
 \   'vim': ['vint'],
 \}
 let g:ale_fixers = {
+\   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
 \   'javascript': ['prettier'],
