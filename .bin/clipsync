@@ -1,14 +1,15 @@
 #!/bin/bash
 
 INPUT=$(cat)
+NCAT=$(command -v ncat nc | head -1)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "$INPUT" | pbcopy
 else
-  if nc --version &> /dev/null | grep "GNU" ; then
-    echo "$INPUT" | nc -c 127.0.0.1 52698
+  if $NCAT --version &> /dev/null | grep "GNU" ; then
+    echo "$INPUT" | $NCAT -c 127.0.0.1 52698
   else
-    echo "$INPUT" | nc 127.0.0.1 52698
+    echo "$INPUT" | $NCAT 127.0.0.1 52698
   fi
 fi
 
