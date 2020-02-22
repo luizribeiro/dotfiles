@@ -478,7 +478,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1429 0 1130 1417 0 0 2560 1417 </string>
+	<string>1281 0 1277 1417 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 2560 1417 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1320,7 +1320,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>45B9FCF2-CB60-424D-A699-EDDD274BE555</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>319</integer>
+	<integer>324</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2117,7 +2117,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-09T16:34:43Z</date>
+	<date>2020-02-17T01:43:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2150,6 +2150,8 @@
 	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>TabsHaveCloseButton</key>
+	<true/>
 	<key>ThreeFingerEmulates</key>
 	<false/>
 	<key>TmuxDashboardLimit</key>
