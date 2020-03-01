@@ -178,6 +178,7 @@ let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
+\   'c': ['clangd'],
 \   'cs': ['omnisharp-roslyn'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
@@ -186,6 +187,7 @@ let g:ale_linters = {
 \   'vim': ['vint'],
 \}
 let g:ale_fixers = {
+\   'c': ['clang-format'],
 \   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
@@ -195,6 +197,7 @@ let g:ale_fixers = {
 \}
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
+let g:ale_c_clangd_executable = '/usr/local/Cellar/llvm/9.0.1/bin/clangd'
 let g:ale_cs_omnisharp_executable = '/Users/luiz/projects/omnisharp-roslyn/artifacts/publish/OmniSharp.Stdio.Driver/mono/OmniSharp.exe'
 highlight ALEError ctermbg=235
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
