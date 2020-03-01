@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>dev.l9o.alfred-workflows.robinhood</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>414FA798-DC07-4F31-A46D-F2EB2A334CAD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB254A4E-727A-4A07-BF0F-9EF8B05BBFDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Luiz Ribeiro</string>
+	<key>description</key>
+	<string>Stock symbol lookup with Robinhood</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Robinhood</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>70</integer>
+				<key>keyword</key>
+				<string>rh</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>#!/usr/bin/python
+import urllib
+import json
+
+url = "https://api.robinhood.com/midlands/search/?query={query}"
+response = urllib.urlopen(url)
+data = json.loads(response.read())
+
+print json.dumps(
+    {
+        "items": [
+            {
+                "uid": stock["symbol"],
+                "arg": stock["symbol"],
+                "title": stock["symbol"],
+                "subtitle": stock["simple_name"],
+            }
+            for stock in data["instruments"]
+        ]
+    }
+)
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Robinhood</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>414FA798-DC07-4F31-A46D-F2EB2A334CAD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://robinhood.com/stocks/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>DB254A4E-727A-4A07-BF0F-9EF8B05BBFDB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow allows you to search for a given stock symbol using Robinhood.</string>
+	<key>uidata</key>
+	<dict>
+		<key>414FA798-DC07-4F31-A46D-F2EB2A334CAD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>DB254A4E-727A-4A07-BF0F-9EF8B05BBFDB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://l9o.dev/</string>
+</dict>
+</plist>

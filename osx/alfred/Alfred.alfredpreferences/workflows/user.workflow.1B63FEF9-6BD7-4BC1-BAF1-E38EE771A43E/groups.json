@@ -1,0 +1,19 @@
+{
+  "data": {
+    "viewer": {
+      "account_user": {
+        "groups": {
+          "edges": [
+            {
+              "node": {
+                "id": "1842399112664790",
+                "name": "Nikita's Quotes",
+                "description": "Word of Nikita."
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
