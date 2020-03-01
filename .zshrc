@@ -124,6 +124,8 @@ if [ "$SSH_AUTH_SOCK" != "/tmp/ssh-agent-$USER-screen" ]; then
   export SSH_AUTH_SOCK="/tmp/ssh-agent-$USER-screen"
 fi
 
+initssh() { ssh $1 echo -n }
+
 #
 # Gentoo-like prompt
 #
