@@ -31,6 +31,7 @@ Plug 'regedarek/ZoomWin'
 
 " Auto-complete
 Plug 'w0rp/ale'
+Plug 'liuchengxu/vista.vim'
 
 " JavaScript
 Plug 'luizribeiro/vim-javascript', { 'for': 'javascript' }
@@ -235,6 +236,10 @@ autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
+
+" vista settings
+let g:vista_default_executive = 'ale'
+nnoremap <silent> <leader>V :Vista<cr>
 
 " auto-completion settings
 set pumheight=10
