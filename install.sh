@@ -59,7 +59,7 @@ git submodule update
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.gnupg"
 chmod go-rwx "$HOME/.gnupg"
-mkdir -p "$HOME/.ssh"
+mkdir -p "$HOME/.ssh/sockets"
 
 echo ""
 
