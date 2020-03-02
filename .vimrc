@@ -239,6 +239,7 @@ nnoremap <silent> gd :ALEGoToDefinition<CR>
 
 " vista settings
 let g:vista_default_executive = 'ale'
+let g:vista_blink = [0, 0]
 nnoremap <silent> <leader>V :Vista<cr>
 
 " auto-completion settings
