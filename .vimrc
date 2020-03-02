@@ -31,7 +31,6 @@ Plug 'regedarek/ZoomWin'
 
 " Auto-complete
 Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " JavaScript
 Plug 'luizribeiro/vim-javascript', { 'for': 'javascript' }
@@ -171,7 +170,36 @@ set t_Co=256
 colorscheme molokai
 
 " vim-ale settings
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_symbols = {
+  \ "text": "",
+  \ "method": "\uf794",
+  \ "function": "\uf794",
+  \ "constructor": "",
+  \ "field": "",
+  \ "variable": "$",
+  \ "class": "",
+  \ "interface": "",
+  \ "module": "",
+  \ "property": "",
+  \ "unit": "unit",
+  \ "value": "val",
+  \ "enum": "\uf77a",
+  \ "keyword": "\uf805",
+  \ "snippet": "",
+  \ "color": "\ue22b",
+  \ "file": "",
+  \ "reference": "",
+  \ "folder": "",
+  \ "enum member": "",
+  \ "constant": "",
+  \ "struct": "",
+  \ "event": "event",
+  \ "operator": "",
+  \ "type_parameter": "type param",
+  \ "<default>": "v"
+  \ }
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
@@ -208,21 +236,17 @@ autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graph
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 
-" deoplete settings
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('auto_complete', 1)
-call deoplete#custom#option('sources', {'_': ['ale']})
-call deoplete#custom#source('_', 'max_menu_width', 80)
+" auto-completion settings
 set pumheight=10
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
   \ <SID>check_back_space() ? "\<TAB>" :
   \ deoplete#manual_complete()
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-function! s:check_back_space() abort "{{{
+function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+endfunction
 
 " lightline setup
 highlight FilenameHighlight ctermfg=250
