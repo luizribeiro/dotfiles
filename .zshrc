@@ -234,12 +234,6 @@ if (( !$+commands[pbcopy] )) ; then
   alias pbcopy='clipsync'
 fi
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  USER_ID=$(id -u $USER)
-  mkdir -p /run/user/$USER_ID/gnupg/
-  ln -snf $HOME/.gnupg/S.gpg-agent /run/user/$USER_ID/gnupg/S.gpg-agent
-fi
-
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
