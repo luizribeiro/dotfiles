@@ -55,6 +55,7 @@ Plug 'chr4/nginx.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'HiPhish/jinja.vim'
 Plug 'cespare/vim-toml'
+Plug 'junegunn/vader.vim'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
@@ -129,7 +130,7 @@ set tabstop=2
 let g:indentLine_char='¦'
 let g:indentLine_color_term=236
 let g:indentLine_fileTypeExclude = ['help', 'man', 'startify']
-let g:indentLine_bufTypeExclude = ['terminal', 'startify']
+let g:indentLine_bufTypeExclude = ['terminal', 'startify', 'vader-result']
 
 
 " signify settings
