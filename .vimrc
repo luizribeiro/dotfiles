@@ -30,7 +30,7 @@ Plug 'luizribeiro/bclose.vim'
 Plug 'regedarek/ZoomWin'
 
 " Auto-complete
-Plug 'w0rp/ale'
+Plug 'luizribeiro/ale'
 Plug 'liuchengxu/vista.vim'
 
 " JavaScript
@@ -208,7 +208,7 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
 \   'c': ['clangd'],
-\   'cs': ['omnisharp-roslyn'],
+\   'cs': ['omnisharp'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
 \   'python': ['pyls', 'pyre'],
@@ -227,7 +227,7 @@ let g:ale_fixers = {
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 let g:ale_c_clangd_executable = '/usr/local/Cellar/llvm/9.0.1/bin/clangd'
-let g:ale_cs_omnisharp_executable = '/Users/luiz/projects/omnisharp-roslyn/artifacts/publish/OmniSharp.Stdio.Driver/mono/OmniSharp.exe'
+let g:ale_cs_omnisharp_executable = '/usr/local/opt/omnisharp-mono/libexec/OmniSharp.exe'
 highlight ALEError ctermbg=235
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
 highlight ALEWarning ctermbg=235
