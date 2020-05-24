@@ -56,6 +56,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'HiPhish/jinja.vim'
 Plug 'cespare/vim-toml'
 Plug 'junegunn/vader.vim'
+Plug 'beyondmarc/hlsl.vim'
 
 " Misc
 Plug 'jamessan/vim-gnupg'
