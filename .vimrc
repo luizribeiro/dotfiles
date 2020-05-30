@@ -381,13 +381,47 @@ endif
 let g:fzf_nvim_statusline = 0
 nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <leader>m :History<cr>
-nnoremap <silent> <leader>f :Files<cr>
+nnoremap <silent> <leader>f :call RepoFiles(bufnr('%'))<cr>
 nnoremap <silent> <leader>R :Rg <c-r><c-w><cr>
 nnoremap <silent> <leader><leader>f :Files %:p:h<cr>
 command! -bang -nargs=? -complete=dir HGFiles call fzf#run({
   \ 'source': "hg status -n --rev '.^'",
   \ 'sink': 'e',
   \ })
+
+function! RepoFiles(buffer) abort
+  let l:repo_type = GetRepoType(a:buffer)
+  if l:repo_type ==# 'git'
+    GitFiles
+  elseif l:repo_type ==# 'hg'
+    HGFiles
+  else
+    Files
+  endif
+endfunction
+
+function! GetRepoType(buffer) abort
+  if FindNearestDir(a:buffer, '.git') !=# ''
+    return 'git'
+  endif
+  if FindNearestDir(a:buffer, '.hg') !=# ''
+    return 'hg'
+  endif
+  return ''
+endfunction
+
+function! FindNearestDir(buffer, dirname) abort
+  let l:buffer_filename = fnamemodify(bufname(a:buffer), ':p')
+  let l:buffer_filename = fnameescape(l:buffer_filename)
+
+  let l:relative_path = finddir(a:dirname, l:buffer_filename . ';')
+
+  if !empty(l:relative_path)
+      return fnamemodify(l:relative_path, ':p')
+  endif
+
+  return ''
+endfunction
 
 nmap <Leader>H :HGFiles<CR>
 
