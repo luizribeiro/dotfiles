@@ -37,3 +37,9 @@ $ brew cask install mailspring steam slack whatsapp monitorcontrol
 $ brew tap caskroom/fonts
 $ brew cask install font-hack-nerd-font
 ```
+
+## TODOs
+
+* **vim**
+  * Try out `aserebryakov/vim-todo-lists`
+    * https://gist.github.com/huytd/668fc018b019fbc49fa1c09101363397
