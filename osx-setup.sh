@@ -98,10 +98,23 @@ SecurityAndPrivacy() {
   defaults write com.apple.screensaver askForPasswordDelay -int 0
 } ; setup SecurityAndPrivacy
 
+MenuBar() {
+  defaults write com.apple.systemuiserver menuExtras -array \
+    "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+} ; setup MenuBar
+
+TouchBar() {
+  defaults write com.apple.touchbar.agent PresentationModeGlobal -string fullControlStrip
+}
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
-  for app in "Dock" "iTerm2" "Alfred" "Finder"; do
+  for app in "Dock" "iTerm2" "Alfred" "Finder" "SystemUIServer" "ControlStrip" "Touch Bar agent"; do
     killall "${app}" > /dev/null 2>&1
   done
   echo "Done"
