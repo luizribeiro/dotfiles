@@ -104,6 +104,7 @@ if [[ ! ($* == *--no-restart*) ]]; then
   for app in "Dock" "iTerm2" "Alfred" "Finder"; do
     killall "${app}" > /dev/null 2>&1
   done
+  echo "Done"
 fi
 
 cd "$OLD_PATH" || exit
