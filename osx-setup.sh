@@ -56,6 +56,9 @@ Keyboard() {
   defaults write NSGlobalDomain InitialKeyRepeat -int 15
   defaults write NSGlobalDomain KeyRepeat -int 2
 
+  # disable automatic period substitution
+  defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
   # this is generated with:
   # defaults export com.apple.symbolichotkeys osx/symbolichotkeys.plist
   # plutil -convert xml1 osx/symbolichotkeys.plist
@@ -111,7 +114,7 @@ MenuBar() {
 
 TouchBar() {
   defaults write com.apple.touchbar.agent PresentationModeGlobal -string fullControlStrip
-}
+} ; setup TouchBar
 
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
