@@ -116,6 +116,11 @@ TouchBar() {
   defaults write com.apple.touchbar.agent PresentationModeGlobal -string fullControlStrip
 } ; setup TouchBar
 
+Bluetooth() {
+  # Increase sound quality for Bluetooth headphones/headsets
+  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+} ; setup Bluetooth
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
