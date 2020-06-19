@@ -83,6 +83,7 @@ Trackpad() {
 
 Mouse() {
   defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+  defaults write -g com.apple.mouse.scaling 3
 } ; setup Mouse
 
 General() {
