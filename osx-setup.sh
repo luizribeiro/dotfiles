@@ -105,6 +105,8 @@ MenuBar() {
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
     "/System/Library/CoreServices/Menu Extras/Volume.menu" \
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+
+  defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  H:mm"
 } ; setup MenuBar
 
 TouchBar() {
