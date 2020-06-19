@@ -113,6 +113,9 @@ MenuBar() {
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 
   defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  H:mm"
+
+  # hide input menu
+  defaults write com.apple.TextInputMenu visible -bool false
 } ; setup MenuBar
 
 TouchBar() {
