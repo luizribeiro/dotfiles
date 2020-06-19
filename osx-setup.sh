@@ -27,6 +27,8 @@ Dock() {
 iTerm2() {
   defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${DOTFILES_PATH}/osx/iterm2/"
   defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+  touch ~/.hushlogin
 } ; setup iTerm2
 
 Alfred() {
