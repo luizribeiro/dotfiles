@@ -24,6 +24,7 @@ DOTFILES=(
   .amethyst
   .bin
   .config/htop
+  .config/karabiner
   .config/nvim
   .dircolors
   .gitconfig
