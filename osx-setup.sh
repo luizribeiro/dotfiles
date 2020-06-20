@@ -140,4 +140,6 @@ if [[ ! ($* == *--no-restart*) ]]; then
   echo "Done"
 fi
 
+open /Applications/Alfred\ 4.app
+
 cd "$OLD_PATH" || exit
