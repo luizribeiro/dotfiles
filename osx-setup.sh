@@ -53,6 +53,9 @@ Finder() {
 
   # avoid creating .DS_store files on network volumes
   defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+  # hide desktop files
+  defaults write com.apple.finder CreateDesktop -bool false
 } ; setup Finder
 
 Keyboard() {
