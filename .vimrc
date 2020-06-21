@@ -236,7 +236,7 @@ highlight ALEWarning ctermbg=235
 highlight ALEWarningSign ctermfg=220 ctermbg=235 cterm=bold
 autocmd FileType hack let b:ale_fix_on_save = 0
 autocmd FileType graphql let b:ale_javascript_prettier_options = '--parser graphql'
-nnoremap <silent> F :ALEFindReferences<CR>
+nnoremap <silent> <leader>F :ALEFindReferences<CR>
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 
