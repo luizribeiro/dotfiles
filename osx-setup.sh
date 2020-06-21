@@ -134,7 +134,7 @@ Bluetooth() {
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
-  for app in "Dock" "iTerm2" "Alfred" "Finder" "SystemUIServer" "ControlStrip" "Touch Bar agent"; do
+  for app in "Dock" "Alfred" "Finder" "SystemUIServer" "ControlStrip" "Touch Bar agent"; do
     killall "${app}" > /dev/null 2>&1
   done
   echo "Done"
