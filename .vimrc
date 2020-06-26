@@ -153,6 +153,7 @@ noremap <silent> <PageDown> <c-d>
 " Keyboard/Mouse settings
 set backspace=indent,eol,start
 set whichwrap=<,>,b,s,[,]
+set mouse=a
 
 " Syntax highlight settings
 syntax on
