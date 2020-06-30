@@ -137,6 +137,11 @@ Bluetooth() {
   defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 } ; setup Bluetooth
 
+VSCode() {
+  # https://github.com/VSCodeVim/Vim#mac
+  defaults write com.facebook.fbvscode ApplePressAndHoldEnabled -bool false
+}
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
