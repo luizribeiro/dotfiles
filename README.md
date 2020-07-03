@@ -21,6 +21,18 @@ Optionally, you can create the following files to customize things locally:
 * `~/.vimrc.local`
 * `~/.zshrc.local`
 
+## Repo Setup
+
+I generally setup these settings on this repo regardless of the machine:
+
+```
+git config user.name "Luiz Ribeiro"
+git config user.email "luizribeiro@gmail.com"
+git config user.signingkey 97A0AE5E03F3499B7D7A65C676A4143237EF5817
+git config pull.rebase true
+git config commit.gpgsign true
+```
+
 ## TODOs
 
 * **vim**
