@@ -226,6 +226,8 @@ if (( !$+commands[pbcopy] )) ; then
   alias pbcopy='clipsync'
 fi
 
+export PIPENV_VENV_IN_PROJECT=1
+
 # load local settings
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
