@@ -7,6 +7,8 @@
 .vim/snips.local/
 .vim/skels.local/
 osx/alfred/Alfred.alfredpreferences/preferences/local/
+# ignore any local changes to dash workflow
+osx/alfred/Alfred.alfredpreferences/workflows/user.workflow.D5D08DA6-B04D-47A1-A72F-07BEFC5BD21D/*
 .bin/fzf
 .ssh/*
 !.ssh/config
