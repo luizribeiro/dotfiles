@@ -140,7 +140,7 @@ Bluetooth() {
 VSCode() {
   # https://github.com/VSCodeVim/Vim#mac
   defaults write com.facebook.fbvscode ApplePressAndHoldEnabled -bool false
-}
+} ; setup VSCode
 
 MissionControl() {
   # bottom-left corner: nothing
