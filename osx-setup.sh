@@ -142,6 +142,24 @@ VSCode() {
   defaults write com.facebook.fbvscode ApplePressAndHoldEnabled -bool false
 }
 
+MissionControl() {
+  # bottom-left corner: nothing
+  defaults write com.apple.dock wvous-bl-corner -int 1
+  defaults write com.apple.dock wvous-bl-modifier -int 1048576
+
+  # bottom-right corner: show desktop
+  defaults write com.apple.dock wvous-br-corner -int 4
+  defaults write com.apple.dock wvous-br-modifier -int 0
+
+  # top-left corner: mission control
+  defaults write com.apple.dock wvous-tl-corner -int 2
+  defaults write com.apple.dock wvous-tl-modifier -int 0
+
+  # top-right corner: notification center
+  defaults write com.apple.dock wvous-tr-corner -int 12
+  defaults write com.apple.dock wvous-tr-modifier -int 0
+} ; setup MissionControl
+
 if [[ ! ($* == *--no-restart*) ]]; then
   echo ""
   echo -n "Restarting affected macOS apps... "
