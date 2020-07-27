@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # tiling options
-yabai -m config layout float
+yabai -m config layout bsp
 
 # mouse support
 yabai -m config focus_follows_mouse off
