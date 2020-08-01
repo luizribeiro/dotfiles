@@ -23,4 +23,4 @@ yabai -m rule --add app="^System Preferences$" manage=off layer=above
 yabai -m rule --add app="^Todoist$" manage=off layer=above
 yabai -m rule --add app="^Cisco AnyConnect" manage=off layer=above
 yabai -m rule --add app="^Authy Desktop$" manage=off layer=above
-yabai -m rule --add app="^Simulator$" manage=off layer=above
+yabai -m rule --add app="^Simulator" manage=off layer=above
