@@ -211,6 +211,7 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
 \   'c': ['clangd'],
+\   'cpp': ['clangd'],
 \   'cs': ['omnisharp'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
@@ -220,6 +221,7 @@ let g:ale_linters = {
 \}
 let g:ale_fixers = {
 \   'c': ['clang-format'],
+\   'cpp': ['clang-format'],
 \   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
@@ -230,7 +232,8 @@ let g:ale_fixers = {
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 let g:ale_python_pyre_auto_pipenv = 1
-let g:ale_c_clangd_executable = '/usr/local/Cellar/llvm/9.0.1/bin/clangd'
+let g:ale_c_clangd_executable = '/usr/local/opt/llvm/bin/clangd'
+let g:ale_cpp_clangd_executable = '/usr/local/opt/llvm/bin/clangd'
 let g:ale_cs_omnisharp_executable = '/usr/local/opt/omnisharp-mono/libexec/OmniSharp.exe'
 highlight ALEError ctermbg=235
 highlight ALEErrorSign ctermfg=196 ctermbg=235 cterm=bold
