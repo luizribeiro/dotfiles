@@ -88,7 +88,7 @@ echo ""
 if ! type "nvim" > /dev/null; then
   VIM="vim"
 else
-  VIM="nvim"
+  VIM="nvim --headless"
 fi
 
 echo -n "Installing vim-plug plugins... "
