@@ -143,6 +143,9 @@ VSCode() {
 } ; setup VSCode
 
 MissionControl() {
+  # don't reorder spaces based on most recent use
+  defaults write com.apple.dock mru-spaces -bool false
+
   # bottom-left corner: nothing
   defaults write com.apple.dock wvous-bl-corner -int 1
   defaults write com.apple.dock wvous-bl-modifier -int 1048576
