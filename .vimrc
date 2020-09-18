@@ -36,6 +36,8 @@ Plug 'liuchengxu/vista.vim'
 " JavaScript
 Plug 'luizribeiro/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Hack / PHP
 Plug 'hhvm/vim-hack', { 'for': 'php' }
@@ -216,6 +218,7 @@ let g:ale_linters = {
 \   'cs': ['omnisharp'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
+\   'typescript': ['tsserver'],
 \   'python': ['pyls', 'pyre'],
 \   'yaml': ['yamllint'],
 \   'vim': ['vint'],
@@ -226,6 +229,7 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
+\   'typescript': ['prettier'],
 \   'javascript': ['prettier'],
 \   'python': ['black'],
 \   'yaml': ['prettier'],
