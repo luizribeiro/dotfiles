@@ -218,7 +218,7 @@ let g:ale_linters = {
 \   'cs': ['omnisharp'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
-\   'typescript': ['tsserver'],
+\   'typescript': ['tsserver', 'eslint'],
 \   'python': ['pyls', 'pyre'],
 \   'yaml': ['yamllint'],
 \   'vim': ['vint'],
