@@ -25,3 +25,5 @@ yabai -m rule --add app="^Todoist$" manage=off layer=above
 yabai -m rule --add app="^Cisco AnyConnect" manage=off layer=above
 yabai -m rule --add app="^Authy Desktop$" manage=off layer=above
 yabai -m rule --add app="^Simulator" manage=off layer=above
+yabai -m rule --add title="Android Emulator" manage=off layer=above
+yabai -m rule --add app="Outlook" title="Reminder" manage=off layer=above
