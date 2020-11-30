@@ -1,3 +1,5 @@
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+
 # key bindings
 bindkey -v # vim mode
 bindkey '\e[3~' delete-char
@@ -115,7 +117,6 @@ export hist_ignore_all_dups
 export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
-export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
 setopt correctall
 
