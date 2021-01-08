@@ -213,8 +213,8 @@ let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_linters = {
-\   'c': ['clangd'],
-\   'cpp': ['clangd'],
+\   'c': ['ccls'],
+\   'cpp': ['ccls'],
 \   'cs': ['omnisharp'],
 \   'hack': ['hack', 'hhast'],
 \   'javascript': ['flow-language-server'],
@@ -224,8 +224,8 @@ let g:ale_linters = {
 \   'vim': ['vint'],
 \}
 let g:ale_fixers = {
-\   'c': ['clang-format'],
-\   'cpp': ['clang-format'],
+\   'c': ['ccls'],
+\   'cpp': ['ccls'],
 \   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
