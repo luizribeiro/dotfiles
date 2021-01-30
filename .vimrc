@@ -224,8 +224,8 @@ let g:ale_linters = {
 \   'vim': ['vint'],
 \}
 let g:ale_fixers = {
-\   'c': ['ccls'],
-\   'cpp': ['ccls'],
+\   'c': ['clang-format'],
+\   'cpp': ['clang-format'],
 \   'css': ['prettier'],
 \   'graphql': ['prettier'],
 \   'hack': ['hackfmt'],
