@@ -1,4 +1,5 @@
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+export PATH="/snap/bin:$PATH"
 
 # key bindings
 bindkey -v # vim mode
