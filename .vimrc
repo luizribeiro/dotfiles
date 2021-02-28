@@ -32,7 +32,7 @@ Plug 'luizribeiro/bclose.vim'
 Plug 'regedarek/ZoomWin'
 
 " Auto-complete
-Plug 'luizribeiro/ale'
+Plug 'dense-analysis/ale'
 Plug 'liuchengxu/vista.vim'
 
 " JavaScript
