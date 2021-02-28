@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 call plug#begin('~/.vim/bundle')
-source ~/.vim/plug.lock
+silent source ~/.vim/plug.lock
 
 " UI quality of life
 Plug 'mhinz/vim-startify'
